@@ -1,10 +1,9 @@
 import React from "react";
-import Row from "./Row";
 
-const Container = () => {
+const Container = (props) => {
   return (
     <div className="container" style={{ width: "auto" }}>
-      <Row />
+      {props.children}
     </div>
   );
 };

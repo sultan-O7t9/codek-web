@@ -1,15 +1,9 @@
 import React from "react";
-import Column from "./Column";
 
-const Row = () => {
+const Row = (props) => {
   return (
     <div className="row" style={{ width: "auto" }}>
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
-      <Column />
+      {props.children}
     </div>
   );
 };

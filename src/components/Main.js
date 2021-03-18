@@ -10,6 +10,7 @@ const Main = () => {
       <HeroSection />
       <Spacer />
       <Services />
+      <Spacer />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import StartupBoxIcon01 from "../assets/img/aeroland-startup-box-icon-01.png";
 import Column from "./Container/Column";
 import Container from "./Container/Container";
+import Row from "./Container/Row";
 import Service from "./Service";
 
 const Services = () => {
@@ -27,7 +28,28 @@ const Services = () => {
           <br />
         </h3>
         <div style={{ width: "100%" }}>
-          <Container />
+          <Container>
+            <Row>
+              <Column>
+                <Service img={StartupBoxIcon01} />
+              </Column>
+              <Column>
+                <Service img={StartupBoxIcon01} />
+              </Column>
+              <Column>
+                <Service img={StartupBoxIcon01} />
+              </Column>
+              <Column>
+                <Service img={StartupBoxIcon01} />
+              </Column>
+              <Column>
+                <Service img={StartupBoxIcon01} />
+              </Column>
+              <Column>
+                <Service img={StartupBoxIcon01} />
+              </Column>
+            </Row>
+          </Container>
         </div>
       </section>
     </div>
