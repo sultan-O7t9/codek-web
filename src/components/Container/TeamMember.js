@@ -1,6 +1,6 @@
 import React from "react";
 
-const TeamMember = () => {
+const TeamMember = ({ member }) => {
   return (
     <div className="card" style={{ borderRadius: "5px", margin: "1rem" }}>
       <div
@@ -9,7 +9,7 @@ const TeamMember = () => {
       >
         <img
           alt=""
-          src="assets/img/avatar-06-140x140.png"
+          src={member.img}
           style={{ width: "140px", height: "140px" }}
         />
         <h3
@@ -20,58 +20,36 @@ const TeamMember = () => {
             textAlign: "center",
           }}
         >
-          John Doe
+          {member.name}
         </h3>
-        <p style={{ color: "var(--gray)" }}>Designer</p>
+        <p style={{ color: "var(--gray)" }}>{member.job}</p>
         <div
           className="btn-group d-lg-flex justify-content-lg-center align-items-lg-center"
           role="group"
         >
-          <a
-            href="inex.html"
-            className="btn btn-primary"
-            style={{
-              width: "3rem",
-              height: "3rem",
-              borderRadius: "50%",
-              border: "1px solid #ccc",
-              background: "var(--white)",
-              color: "var(--secondary)",
-              margin: "10px",
-            }}
-          >
-            X
-          </a>
-          <a
-            href="inex.html"
-            className="btn btn-primary"
-            style={{
-              width: "3rem",
-              height: "3rem",
-              "border-radius": "50%",
-              border: "1px solid #ccc",
-              background: "var(--white)",
-              color: "var(--secondary)",
-              margin: "10px",
-            }}
-          >
-            X
-          </a>
-          <a
-            href="inex.html"
-            className="btn btn-primary"
-            style={{
-              width: "3rem",
-              height: "3rem",
-              "border-radius": "50%",
-              border: "1px solid #ccc",
-              background: "var(--white)",
-              color: "var(--secondary)",
-              margin: "10px",
-            }}
-          >
-            X
-          </a>
+          {member.links.map((link) => {
+            return (
+              <a
+                href={link.hRef}
+                className="btn btn-primary"
+                style={{
+                  width: "3rem",
+                  height: "3rem",
+                  borderRadius: "50%",
+                  border: "1px solid #ccc",
+                  background: "var(--white)",
+                  color: "var(--secondary)",
+                  margin: "10px",
+                  fontSize: "1.5rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <i class={link.icon}></i>
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>

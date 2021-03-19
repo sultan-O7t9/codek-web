@@ -1,12 +1,39 @@
 import React from "react";
+import TeamMember from "./Container/TeamMember";
 import Spacer from "./Spacer";
+import empImg from "../assets/img/avatar-06-140x140.png";
 
 const Team = () => {
   const team = [
     {
       name: "John Doe",
       job: "Designer",
-      links: ["google.com", "google.com", "google.com"],
+      img: empImg,
+      links: [
+        { hRef: "google.com", icon: "fab fa-instagram" },
+        { hRef: "google.com", icon: "fab fa-facebook" },
+        { hRef: "google.com", icon: "fab fa-twitter" },
+      ],
+    },
+    {
+      name: "John Doe",
+      job: "Designer",
+      img: empImg,
+      links: [
+        { hRef: "google.com", icon: "fab fa-instagram" },
+        { hRef: "google.com", icon: "fab fa-facebook" },
+        { hRef: "google.com", icon: "fab fa-twitter" },
+      ],
+    },
+    {
+      name: "John Doe",
+      job: "Designer",
+      img: empImg,
+      links: [
+        { hRef: "google.com", icon: "fab fa-instagram" },
+        { hRef: "google.com", icon: "fab fa-facebook" },
+        { hRef: "google.com", icon: "fab fa-twitter" },
+      ],
     },
   ];
   return (
@@ -42,7 +69,7 @@ const Team = () => {
       <Spacer height="4vh" background="rba(0,0,0,0)" />
 
       <div className="d-flex justify-content-center flex-wrap justify-content-sm-center justify-content-md-center justify-content-lg-center">
-        <div className="card" style={{ borderRadius: "5px", margin: "1rem" }}>
+        {/* <div className="card" style={{ borderRadius: "5px", margin: "1rem" }}>
           <div
             className="card-body d-flex d-lg-flex flex-column align-items-center justify-content-lg-center align-items-lg-center"
             style={{ padding: "1.8rem 2rem", margin: "0" }}
@@ -114,7 +141,10 @@ const Team = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
+        {team.map((mmbr) => {
+          return <TeamMember member={mmbr} />;
+        })}
         {/*  */}
       </div>
       <div style={{ width: "100vw", height: "12vh", color: "inherit" }}></div>
