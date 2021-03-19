@@ -2,7 +2,7 @@ import React from "react";
 
 const Container = (props) => {
   return (
-    <div className="container" style={{ width: "auto" }}>
+    <div className={props.containerClasses} style={props.styles}>
       {props.children}
     </div>
   );

@@ -7,27 +7,25 @@ const Footer = () => {
         width: "100%",
         height: "auto",
         background: "RGB(36, 38, 89)",
-        "border-top": "3px solid RGB(88, 89, 181)",
+        borderTop: "3px solid RGB(88, 89, 181)",
       }}
     >
       <div
         className="d-flex flex-row"
         style={{
-          "padding-top": "4.2rem",
-          "padding-right": "2.75rem",
-          "padding-left": "2.75rem",
-          "padding-bottom": "1.0625rem",
+          paddingTop: "4.2rem",
+          paddingRight: "2.75rem",
+          paddingLeft: "2.75rem",
+          paddingBottom: "1.0625rem",
         }}
       >
         <div style={{ padding: "1rem 2rem", width: "auto" }}>
-          <h1 style={{ color: "var(--white)", "font-size": "2.625rem" }}>
-            CODEK
-          </h1>
+          <h1 style={{ color: "var(--white)", fontSize: "2.625rem" }}>CODEK</h1>
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Street 11 ABC, XYZ
@@ -35,8 +33,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Street 11 ABC, XYZ
@@ -44,8 +42,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Street 11 ABC, XYZ
@@ -57,10 +55,10 @@ const Footer = () => {
           <h2
             style={{
               color: "var(--white)",
-              "font-size": "1.125rem",
+              fontSize: "1.125rem",
               padding: "0",
-              "margin-bottom": "10px",
-              "padding-bottom": "13px",
+              marginBottom: "10px",
+              paddingBottom: "13px",
             }}
           >
             Who we are
@@ -68,8 +66,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             About us
@@ -77,8 +75,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Before you go
@@ -86,8 +84,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Online check in
@@ -95,8 +93,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             FAQ
@@ -108,10 +106,10 @@ const Footer = () => {
           <h2
             style={{
               color: "var(--white)",
-              "font-size": "1.125rem",
+              fontSize: "1.125rem",
               padding: "0",
-              "margin-bottom": "10px",
-              "padding-bottom": "13px",
+              marginBottom: "10px",
+              paddingBottom: "13px",
             }}
           >
             Quick links
@@ -119,8 +117,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Terms of Payment
@@ -128,8 +126,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Privacy Policy
@@ -137,8 +135,8 @@ const Footer = () => {
           <p
             style={{
               color: "RGB(188, 188, 214)",
-              "font-weight": "bold",
-              "font-size": "15px",
+              fontWeight: "bold",
+              fontSize: "15px",
             }}
           >
             Where to Find Us
@@ -148,7 +146,7 @@ const Footer = () => {
       <div
         className="d-flex flex-row justify-content-between align-items-lg-center"
         style={{
-          "border-top": "1px solid var(--gray)",
+          borderTop: "1px solid var(--gray)",
           padding: "1rem 2.75rem",
           height: "auto",
         }}
@@ -156,9 +154,9 @@ const Footer = () => {
         <p
           style={{
             color: "RGB(188, 188, 214)",
-            "font-weight": "normal",
+            fontWeight: "normal",
             margin: "0",
-            "text-align": "center",
+            textAlign: "center",
           }}
         >
           © 2019 AeroLand. All Rights Reserved.
@@ -168,12 +166,12 @@ const Footer = () => {
             className="btn btn-primary"
             type="button"
             style={{
-              "border-radius": "50%",
+              borderRadius: "50%",
               width: "3rem",
               height: "3rem",
               margin: "10px",
               background: "rgba(0,0,0,0)",
-              "border-color": "var(--gray)",
+              borderColor: "var(--gray)",
             }}
           >
             <i class="fab fa-twitter"></i>
@@ -182,12 +180,12 @@ const Footer = () => {
             className="btn btn-primary"
             type="button"
             style={{
-              "border-radius": "50%",
+              borderRadius: "50%",
               width: "3rem",
               height: "3rem",
               margin: "10px",
               background: "rgba(0,0,0,0)",
-              "border-color": "var(--gray)",
+              borderColor: "var(--gray)",
             }}
           >
             <i class="fab fa-instagram"></i>
@@ -196,12 +194,12 @@ const Footer = () => {
             className="btn btn-primary"
             type="button"
             style={{
-              "border-radius": "50%",
+              borderRadius: "50%",
               width: "3rem",
               height: "3rem",
               margin: "10px",
               background: "rgba(0,0,0,0)",
-              "border-color": "var(--gray)",
+              borderColor: "var(--gray)",
             }}
           >
             <i className="fab fa-facebook-f"></i>

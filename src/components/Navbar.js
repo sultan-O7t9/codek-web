@@ -12,9 +12,9 @@ const Navbar = () => {
           id="nav-brand"
           href="#home"
           style={{
-            "font-size": "2.5rem",
+            fontSize: "2.5rem",
             color: "var(--white)",
-            "font-weight": "bold",
+            fontWeight: "bold",
           }}
         >
           CODEK
@@ -23,7 +23,7 @@ const Navbar = () => {
           data-toggle="collapse"
           className="navbar-toggler"
           data-target="#navcol-1"
-          style={{ "border-style": "none" }}
+          style={{ borderStyle: "none" }}
         >
           <span className="sr-only">Toggle navigation</span>
           <span className="navbar-toggler-icon"></span>
@@ -42,8 +42,8 @@ const Navbar = () => {
                 href="#home"
                 style={{
                   color: "var(--white)",
-                  "font-weight": "bold",
-                  "margin-left": "1rem",
+                  fontWeight: "bold",
+                  marginLeft: "1rem",
                 }}
               >
                 HOME
@@ -55,8 +55,8 @@ const Navbar = () => {
                 href="#services"
                 style={{
                   color: "var(--white)",
-                  "font-weight": "bold",
-                  "margin-left": "1rem",
+                  fontWeight: "bold",
+                  marginLeft: "1rem",
                 }}
               >
                 SERVICES
@@ -68,8 +68,8 @@ const Navbar = () => {
                 href="#platforms"
                 style={{
                   color: "var(--white)",
-                  "font-weight": "bold",
-                  "margin-left": "1rem",
+                  fontWeight: "bold",
+                  marginLeft: "1rem",
                 }}
               >
                 PLATFORMS
@@ -81,8 +81,8 @@ const Navbar = () => {
                 href="#contact"
                 style={{
                   color: "var(--white)",
-                  "font-weight": "bold",
-                  "margin-left": "1rem",
+                  fontWeight: "bold",
+                  marginLeft: "1rem",
                 }}
               >
                 CONTACT
@@ -94,8 +94,8 @@ const Navbar = () => {
                 href="#contact"
                 style={{
                   color: "var(--white)",
-                  "font-weight": "bold",
-                  "margin-left": "1rem",
+                  fontWeight: "bold",
+                  marginLeft: "1rem",
                 }}
               >
                 <button
@@ -105,9 +105,9 @@ const Navbar = () => {
                     border: "3px solid var(--indigo)",
                     background: "var(--white)",
                     color: "var(--indigo)",
-                    "font-weight": "bold",
+                    fontWeight: "bold",
                     padding: "10px 30px",
-                    "border-radius": "5px",
+                    borderRadius: "5px",
                   }}
                 >
                   HIRE US

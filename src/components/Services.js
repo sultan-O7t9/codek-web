@@ -6,6 +6,44 @@ import Row from "./Container/Row";
 import Service from "./Service";
 
 const Services = () => {
+  const services = [
+    {
+      title: "Web Development",
+      desc:
+        "Our technical experts have a flair for developing clean-coded &amp;seamless websites based on customers’ needs",
+      img: StartupBoxIcon01,
+    },
+    {
+      title: "Web Development",
+      desc:
+        "Our technical experts have a flair for developing clean-coded &amp;seamless websites based on customers’ needs",
+      img: StartupBoxIcon01,
+    },
+    {
+      title: "Web Development",
+      desc:
+        "Our technical experts have a flair for developing clean-coded &amp;seamless websites based on customers’ needs",
+      img: StartupBoxIcon01,
+    },
+    {
+      title: "Web Development",
+      desc:
+        "Our technical experts have a flair for developing clean-coded &amp;seamless websites based on customers’ needs",
+      img: StartupBoxIcon01,
+    },
+    {
+      title: "Web Development",
+      desc:
+        "Our technical experts have a flair for developing clean-coded &amp;seamless websites based on customers’ needs",
+      img: StartupBoxIcon01,
+    },
+    {
+      title: "Web Development",
+      desc:
+        "Our technical experts have a flair for developing clean-coded &amp;seamless websites based on customers’ needs",
+      img: StartupBoxIcon01,
+    },
+  ];
   return (
     <div>
       <section
@@ -28,26 +66,23 @@ const Services = () => {
           <br />
         </h3>
         <div style={{ width: "100%" }}>
-          <Container>
-            <Row>
-              <Column>
-                <Service img={StartupBoxIcon01} />
-              </Column>
-              <Column>
-                <Service img={StartupBoxIcon01} />
-              </Column>
-              <Column>
-                <Service img={StartupBoxIcon01} />
-              </Column>
-              <Column>
-                <Service img={StartupBoxIcon01} />
-              </Column>
-              <Column>
-                <Service img={StartupBoxIcon01} />
-              </Column>
-              <Column>
-                <Service img={StartupBoxIcon01} />
-              </Column>
+          <Container containerClasses="container" styles={{ width: "auto" }}>
+            <Row rowClasses="row" styles={{ width: "auto" }}>
+              {services.map((service, index) => {
+                return (
+                  <Column
+                    key={index}
+                    columnClasses="col-md-4 d-md-flex justify-content-md-center align-items-md-center"
+                    styles={{ padding: "1rem" }}
+                  >
+                    <Service
+                      img={service.img}
+                      serviceTitle={service.title}
+                      serviceDescription={service.desc}
+                    />
+                  </Column>
+                );
+              })}
             </Row>
           </Container>
         </div>

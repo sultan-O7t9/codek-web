@@ -1,7 +1,7 @@
 import React from "react";
 
 const Service = (props) => {
-  const { img } = props;
+  const { img, serviceTitle, serviceDescription } = props;
   return (
     <div
       className="d-flex flex-column align-items-center"
@@ -22,7 +22,7 @@ const Service = (props) => {
           color: "RGB(113, 116, 152)",
         }}
       >
-        Web Development
+        {serviceTitle}
       </h4>
       <p
         className="text-center"
@@ -34,8 +34,7 @@ const Service = (props) => {
         }}
       >
         <br />
-        Our technical experts have a flair for developing clean-coded &amp;
-        seamless websites based on customers’ needs
+        {serviceDescription}
         <br />
         <br />
       </p>
