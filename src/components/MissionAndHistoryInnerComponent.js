@@ -3,7 +3,7 @@ import React from "react";
 const MissionAndHistoryInnerComponent = ({ content }) => {
   return (
     <div
-      className="d-flex d-sm-flex d-md-flex d-lg-flex flex-row align-items-start flex-wrap justify-content-sm-center align-items-lg-center"
+      className=" d-flex d-sm-flex d-md-flex d-lg-flex flex-row align-items-start flex-wrap justify-content-sm-center align-items-lg-center"
       style={{ padding: "2rem 1rem" }}
     >
       <div className="d-sm-flex" style={{ width: "55%" }}>

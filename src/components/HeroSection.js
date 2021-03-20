@@ -1,11 +1,17 @@
 import React from "react";
 import heroSection from "../assets/img/heroSection.png";
+import "../assets/css/styles.css";
 
 const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      style={{ width: "100", height: "auto", background: "var(--indigo)" }}
+      style={{
+        width: "100",
+        height: "auto",
+        background: "var(--indigo)",
+        position: "relative",
+      }}
     >
       <div className="d-flex">
         <div
@@ -54,17 +60,16 @@ const HeroSection = () => {
               <br />
               <br />
             </p>
-            <button
-              className="btn btn-primary"
-              type="button"
+            <a
+              href="index.html"
+              className="btn btn-primary hero-section-cta"
               style={{
                 padding: "1rem 2.25rem",
-                "font-weight": "bold",
-                background: "RGB(56, 202, 137)",
+                fontWeight: "bold",
               }}
             >
               Get Started
-            </button>
+            </a>
           </div>
         </div>
         <div
@@ -86,6 +91,13 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      {/* <WaveAnimation />
+      <Spacer
+        height="16vh"
+        width="100vw"
+        background="var(--white)"
+        style={{ position: "absolute", bottom: 0 }}
+      /> */}
     </section>
   );
 };

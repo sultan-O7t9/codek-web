@@ -1,24 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MissionAndHistoryInnerComponent from "./MissionAndHistoryInnerComponent";
 import missionImg from "../assets/img/aeroland-tab-content-image-04.png";
 import hitoryImg from "../assets/img/aeroland-tab-content-image-05.png";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const MissionAndHistory = () => {
   const [isHistory, setIsHistory] = useState(true);
-
-  const notSelectedBtn = {
-    margin: "0 2rem",
-    padding: "1.2rem 2rem",
-    borderRadius: "5px",
-    fontWeight: "bold",
-    letterSpacing: "1px",
-    fontSize: "15px",
-    background: "var(--white)",
-    color: "var(--gray)",
-    borderColor: "RGB(237, 237, 237)",
-  };
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const selectedBtn = {
-    ...notSelectedBtn,
     background: "#7c82fe",
     borderColor: "#888888",
     color: "white",
@@ -60,10 +53,13 @@ const MissionAndHistory = () => {
 
   return (
     <section
-      className="d-flex flex-column align-items-md-center align-items-lg-center"
+      className="msn-hstry element-animation d-flex flex-column align-items-md-center align-items-lg-center"
       style={{ background: "var(--white);" }}
     >
       <h1
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-offset="100px"
         className="text-center"
         style={{
           fontSize: "2.625rem",
@@ -83,14 +79,20 @@ const MissionAndHistory = () => {
           className="d-sm-flex d-lg-flex justify-content-sm-center justify-content-lg-center align-items-lg-center"
           style={{ borderColor: "RGB(237, 237, 237)" }}
         >
-          <div className="btn-group" role="group">
+          <div
+            className="btn-group"
+            role="group"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-offset="100px"
+          >
             <button
               onClick={() => {
                 setIsHistory(true);
               }}
-              className="btn btn-primary"
+              className="btn btn-primary btn-msn-hstry"
               type="button"
-              style={isHistory ? selectedBtn : notSelectedBtn}
+              style={isHistory ? selectedBtn : null}
             >
               OUR HISTORY
             </button>
@@ -98,9 +100,9 @@ const MissionAndHistory = () => {
               onClick={() => {
                 setIsHistory(false);
               }}
-              className="btn btn-primary"
+              className="btn btn-primary btn-msn-hstry"
               type="button"
-              style={!isHistory ? selectedBtn : notSelectedBtn}
+              style={!isHistory ? selectedBtn : null}
             >
               OUR MISSION
             </button>

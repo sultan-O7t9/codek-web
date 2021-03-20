@@ -90,7 +90,6 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a
-                className="nav-link active"
                 href="#contact"
                 style={{
                   color: "var(--white)",
@@ -99,12 +98,9 @@ const Navbar = () => {
                 }}
               >
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-primary nav-cta"
                   type="button"
                   style={{
-                    border: "3px solid var(--indigo)",
-                    background: "var(--white)",
-                    color: "var(--indigo)",
                     fontWeight: "bold",
                     padding: "10px 30px",
                     borderRadius: "5px",

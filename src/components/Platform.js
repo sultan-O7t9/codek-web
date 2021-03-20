@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Platform = (props) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div
-      className="d-flex flex-column align-items-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center"
-      style={{ padding: "1.875rem", background: "rgba(0,0,0,0)" }}
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-offset="100px"
+      data-aos-delay={props.animeDelay}
+      className=" platform d-flex flex-column align-items-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center"
+      style={{
+        padding: "1.875rem",
+        background: "rgba(0,0,0,0)",
+        borderRadius: "50px",
+      }}
     >
       <div
         style={{
           width: "80px",
           height: "80px",
-          "border-radius": "26px",
+          borderRadius: "26px",
           background: props.background,
-          "margin-bottom": "1.1875rem",
-          "font-size": "2rem",
+          marginBottom: "1.1875rem",
+          fontSize: "2rem",
           display: "flex",
-          "justify-content": "center",
-          "align-items": "center",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         {props.children}

@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "../assets/css/styles.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Service = (props) => {
-  const { img, serviceTitle, serviceDescription } = props;
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  const { img, serviceTitle, serviceDescription, animeDelay } = props;
   return (
     <div
-      className="d-flex flex-column align-items-center"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-offset="100px"
+      data-aos-delay={animeDelay}
+      className="d-flex flex-column align-items-center service"
       style={{
         width: "98",
         "min-height": "100px",
         padding: "1rem",
+        borderRadius: "50px",
       }}
     >
       <img src={img} alt="startupboxicon" />

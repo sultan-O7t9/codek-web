@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Column from "./Container/Column";
 import Container from "./Container/Container";
 import Row from "./Container/Row";
@@ -7,42 +10,51 @@ import Spacer from "./Spacer";
 import "../assets/css/styles.css";
 
 const Platforms = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const platforms = [
     {
       title: "Windows OS",
       icon: "fab fa-microsoft",
       color: "#ff9800",
       background: "#ffe0b2",
+      animeDelay: "0",
     },
     {
       title: "Android OS",
       icon: "fab fa-android",
       color: "#4caf50",
       background: "#b7dfb9",
+      animeDelay: "100",
     },
     {
       title: "IOS",
       icon: "fab fa-apple",
       color: "#534ee8",
       background: "#f5f3fe",
+      animeDelay: "200",
     },
     {
       title: "React JS ",
       icon: "fab fa-react",
       color: "#4bb5ca",
       background: "#eaf9ff",
+      animeDelay: "300",
     },
     {
       title: "Node JS",
       icon: "fab fa-node",
       color: "#8bc34a",
       background: "#cde5b2",
+      animeDelay: "400",
     },
     {
       title: "React Native",
       icon: "fab fa-react",
       color: "#4bb5ca",
       background: "#eaf9ff",
+      animeDelay: "500",
     },
   ];
   return (
@@ -52,6 +64,9 @@ const Platforms = () => {
       style={{ background: "var(--white)" }}
     >
       <h1
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-offset="100px"
         className="d-flex"
         style={{
           "font-size": "2.625rem",
@@ -63,6 +78,9 @@ const Platforms = () => {
         Present over 50 platfroms
       </h1>
       <p
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-offset="100px"
         className="d-flex"
         style={{
           "font-size": "15px",
@@ -92,6 +110,7 @@ const Platforms = () => {
                   <Platform
                     title={platform.title}
                     background={platform.background}
+                    animeDelay={platform.animeDelay}
                   >
                     <i
                       class={platform.icon}

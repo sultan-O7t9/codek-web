@@ -1,9 +1,12 @@
-.wave-container {
+/* .wave-container {
   background-color: rgba(0, 0, 0, 0);
-  transform: translateY(-80%);
-}
+
+ transform: translateY(-60%);
+}*/
 
 svg {
+  transform: translateY(-60%);
+
   width: 100%;
   overflow: visible;
 }
@@ -14,6 +17,11 @@ svg {
   fill: #fff;
 }
 
+#wave2 {
+  animation-duration: 5s;
+  animation-direction: reverse;
+  opacity: 1;
+}
 @keyframes wave {
   to {
     transform: translateX(-100%);

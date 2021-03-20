@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/styles.css";
 
 const TeamMember = ({ member }) => {
   return (
@@ -31,14 +32,12 @@ const TeamMember = ({ member }) => {
             return (
               <a
                 href={link.hRef}
-                className="btn btn-primary"
+                className="btn btn-primary team-mmbr-icon-link"
                 style={{
                   width: "3rem",
                   height: "3rem",
                   borderRadius: "50%",
                   border: "1px solid #ccc",
-                  background: "var(--white)",
-                  color: "var(--secondary)",
                   margin: "10px",
                   fontSize: "1.5rem",
                   display: "flex",

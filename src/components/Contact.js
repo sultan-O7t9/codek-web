@@ -1,6 +1,8 @@
 import React from "react";
 import formImg from "../assets/img/aeroland-startup-image-02.png";
 import ContactForm from "./ContactForm";
+import Column from "./Container/Column";
+import Container from "./Container/Container";
 
 const Contact = () => {
   return (
@@ -10,17 +12,23 @@ const Contact = () => {
       style={{ background: "var(--white)" }}
     >
       <div className="container">
-        <div className="row">
-          <div className="col-md-6 col-lg-6">
+        <Container containerClasses="row" styles={{}}>
+          <Column columnClasses="col-md-6 col-lg-6">
             <div style={{ width: "100%", padding: "0" }}>
               {/*  */}
               <div className="d-sm-flex flex-column align-items-sm-center align-items-lg-start">
                 <h3
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-offset="100px"
                   style={{ "font-size": "2.625rem", color: "RGB(44, 48, 120)" }}
                 >
                   Be our parteners!
                 </h3>
                 <p
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-offset="100px"
                   style={{
                     "font-size": "15px",
                     "font-weight": "bold",
@@ -33,17 +41,22 @@ const Contact = () => {
               {/*  */}
               <ContactForm />
             </div>
-          </div>
-          <div className="col-md-6 col-lg-6">
-            <div style={{ width: "100%", padding: "0" }}>
+          </Column>
+          <Column columnClasses="col-md-6 col-lg-6">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-offset="100px"
+              style={{ width: "100%", padding: "0" }}
+            >
               <img
                 alt=""
                 src={formImg}
                 style={{ width: "100%", height: "auto" }}
               />
             </div>
-          </div>
-        </div>
+          </Column>
+        </Container>
       </div>
     </section>
   );

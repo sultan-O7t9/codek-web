@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormInput from "./FormInput";
+import "../assets/css/styles.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +12,10 @@ const ContactForm = () => {
     subject: null,
     message: null,
   });
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const changeNameHandler = (e) => {
     const value = e.target.value;
@@ -44,6 +52,9 @@ const ContactForm = () => {
 
   return (
     <form
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-offset="100px"
       className="d-flex justify-content-between flex-wrap"
       onSubmit={(e) => {
         submitFormHanler(e);
@@ -112,7 +123,7 @@ const ContactForm = () => {
         }}
       ></textarea>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary form-btn"
         style={{
           padding: "1rem 1.6rem",
           "border-radius": "5px",

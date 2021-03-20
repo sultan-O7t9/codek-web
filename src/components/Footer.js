@@ -1,11 +1,15 @@
 import React from "react";
+import "../assets/css/styles.css";
 
 const Footer = () => {
   return (
     <footer
       style={{
+        position: "fixed",
+        bottom: "0",
+        zIndex: "-1",
         width: "100%",
-        height: "auto",
+        maxHeight: "65vh",
         background: "RGB(36, 38, 89)",
         borderTop: "3px solid RGB(88, 89, 181)",
       }}
@@ -64,40 +68,49 @@ const Footer = () => {
             Who we are
           </h2>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
-              color: "RGB(188, 188, 214)",
+              display: "block",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
             About us
           </a>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
-              color: "RGB(188, 188, 214)",
+              display: "block",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
             Before you go
           </a>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
+              display: "block",
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
             Online check in
           </a>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
-              color: "RGB(188, 188, 214)",
+              display: "block",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
@@ -119,30 +132,36 @@ const Footer = () => {
             Quick links
           </h2>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
-              color: "RGB(188, 188, 214)",
+              display: "block",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
             Terms of Payment
           </a>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
-              color: "RGB(188, 188, 214)",
+              display: "block",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
             Privacy Policy
           </a>
           <a
+            className="footer-nav-links"
             href="index.html"
             style={{
-              color: "RGB(188, 188, 214)",
+              display: "block",
               fontWeight: "bold",
+              marginBottom: "0.5rem",
               fontSize: "15px",
             }}
           >
@@ -171,14 +190,15 @@ const Footer = () => {
         <div className="btn-group order-1" role="group">
           <a
             href="index.html"
-            className="btn btn-primary"
-            type="button"
+            className="btn btn-primary footer-icon-link"
             style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               borderRadius: "50%",
               width: "3rem",
               height: "3rem",
               margin: "10px",
-              background: "rgba(0,0,0,0)",
               borderColor: "var(--gray)",
             }}
           >
@@ -186,14 +206,15 @@ const Footer = () => {
           </a>
           <a
             href="index.html"
-            className="btn btn-primary"
-            type="button"
+            className="btn btn-primary footer-icon-link"
             style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               borderRadius: "50%",
               width: "3rem",
               height: "3rem",
               margin: "10px",
-              background: "rgba(0,0,0,0)",
               borderColor: "var(--gray)",
             }}
           >
@@ -201,14 +222,15 @@ const Footer = () => {
           </a>
           <a
             href="index.html"
-            className="btn btn-primary"
-            type="button"
+            className="btn btn-primary footer-icon-link"
             style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
               borderRadius: "50%",
               width: "3rem",
               height: "3rem",
               margin: "10px",
-              background: "rgba(0,0,0,0)",
               borderColor: "var(--gray)",
             }}
           >
