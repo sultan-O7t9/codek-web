@@ -1,6 +1,5 @@
 import React from "react";
 import heroSection from "../assets/img/heroSection.png";
-import WaveAnimation from "./WaveAnimation";
 
 const HeroSection = () => {
   return (

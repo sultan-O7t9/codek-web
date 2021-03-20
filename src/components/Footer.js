@@ -63,7 +63,8 @@ const Footer = () => {
           >
             Who we are
           </h2>
-          <p
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -71,8 +72,9 @@ const Footer = () => {
             }}
           >
             About us
-          </p>
-          <p
+          </a>
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -80,8 +82,9 @@ const Footer = () => {
             }}
           >
             Before you go
-          </p>
-          <p
+          </a>
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -89,8 +92,9 @@ const Footer = () => {
             }}
           >
             Online check in
-          </p>
-          <p
+          </a>
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -98,7 +102,7 @@ const Footer = () => {
             }}
           >
             FAQ
-          </p>
+          </a>
         </div>
         <div
           style={{ width: "auto", margin: "0.8rem 0", padding: "1rem 2rem" }}
@@ -114,7 +118,8 @@ const Footer = () => {
           >
             Quick links
           </h2>
-          <p
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -122,8 +127,9 @@ const Footer = () => {
             }}
           >
             Terms of Payment
-          </p>
-          <p
+          </a>
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -131,8 +137,9 @@ const Footer = () => {
             }}
           >
             Privacy Policy
-          </p>
-          <p
+          </a>
+          <a
+            href="index.html"
             style={{
               color: "RGB(188, 188, 214)",
               fontWeight: "bold",
@@ -140,7 +147,7 @@ const Footer = () => {
             }}
           >
             Where to Find Us
-          </p>
+          </a>
         </div>
       </div>
       <div
@@ -159,10 +166,11 @@ const Footer = () => {
             textAlign: "center",
           }}
         >
-          © 2019 AeroLand. All Rights Reserved.
+          © 2021 CODEK. All Rights Reserved.
         </p>
         <div className="btn-group order-1" role="group">
-          <button
+          <a
+            href="index.html"
             className="btn btn-primary"
             type="button"
             style={{
@@ -175,8 +183,9 @@ const Footer = () => {
             }}
           >
             <i class="fab fa-twitter"></i>
-          </button>
-          <button
+          </a>
+          <a
+            href="index.html"
             className="btn btn-primary"
             type="button"
             style={{
@@ -189,8 +198,9 @@ const Footer = () => {
             }}
           >
             <i class="fab fa-instagram"></i>
-          </button>
-          <button
+          </a>
+          <a
+            href="index.html"
             className="btn btn-primary"
             type="button"
             style={{
@@ -203,7 +213,7 @@ const Footer = () => {
             }}
           >
             <i className="fab fa-facebook-f"></i>
-          </button>
+          </a>
         </div>
       </div>
     </footer>
