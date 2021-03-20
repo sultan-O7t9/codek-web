@@ -1,0 +1,21 @@
+.wave-container {
+  background-color: rgba(0, 0, 0, 0);
+  transform: translateY(-80%);
+}
+
+svg {
+  width: 100%;
+  overflow: visible;
+}
+
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count: infinite;
+  fill: #fff;
+}
+
+@keyframes wave {
+  to {
+    transform: translateX(-100%);
+  }
+}

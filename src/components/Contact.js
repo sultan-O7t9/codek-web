@@ -1,5 +1,6 @@
 import React from "react";
 import formImg from "../assets/img/aeroland-startup-image-02.png";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -30,75 +31,7 @@ const Contact = () => {
                 </p>
               </div>
               {/*  */}
-              <form className="d-flex justify-content-between flex-wrap">
-                <input
-                  className="form-control"
-                  type="text"
-                  style={{
-                    "min-width": "47%",
-                    padding: "1.6rem",
-                    background: "RGB(248, 248, 248)",
-                    "border-radius": "5px",
-                    "border-width": "0",
-                    width: "47%",
-                  }}
-                  placeholder="Name*"
-                />
-                <input
-                  className="form-control"
-                  type="text"
-                  style={{
-                    "min-width": "47%",
-                    padding: "1.6rem",
-                    background: "RGB(248, 248, 248)",
-                    "border-radius": "5px",
-                    "border-width": "0",
-                    width: "47%",
-                  }}
-                  placeholder="Email*"
-                />
-                <input
-                  className="form-control"
-                  type="text"
-                  style={{
-                    "min-width": "98%",
-                    margin: "1.5rem 0",
-                    padding: "1.6rem",
-                    background: "RGB(248, 248, 248)",
-                    "border-radius": "5px",
-                    "border-width": "0",
-                  }}
-                  placeholder="Subject"
-                />
-                <textarea
-                  className="form-control"
-                  style={{
-                    "min-height": "160px",
-                    padding: "1.6rem",
-                    background: "RGB(248, 248, 248)",
-                    "border-radius": "5px",
-                    "border-width": "0",
-                  }}
-                  placeholder="Message"
-                ></textarea>
-                <button
-                  className="btn btn-primary"
-                  style={{
-                    padding: "1rem 1.6rem",
-                    "border-radius": "5px",
-                    background:
-                      "linear-gradient(45deg, RGB(100, 100, 232), RGB(151, 120, 241)), #7c82fe",
-                    "font-weight": "bold",
-                    "letter-spacing": "1px",
-                    "font-size": "15px",
-                    "border-color": "#888888",
-                    margin: "1.5rem 0",
-                    "margin-left": "1.2rem",
-                  }}
-                >
-                  Send message
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
           <div className="col-md-6 col-lg-6">
