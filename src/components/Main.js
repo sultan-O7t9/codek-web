@@ -6,6 +6,7 @@ import Platforms from "./Platforms";
 import MissionAndHistory from "./MissionAndHistory";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
+import Contact from "./Contact";
 
 const Main = () => {
   return (
@@ -23,7 +24,7 @@ const Main = () => {
       <Spacer height="16vh" background="var(--white)" />
       <Testimonials />
       <Spacer height="16vh" background="var(--white)" />
-
+      <Contact />
       <Spacer height="16vh" background="var(--white)" />
     </main>
   );
