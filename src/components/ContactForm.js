@@ -12,6 +12,12 @@ const ContactForm = () => {
     subject: null,
     message: null,
   });
+  const [inValidEmail, setInValidEmail] = useState(false);
+  const [inValidInput, setInValidInput] = useState({
+    name: false,
+    subject: false,
+    message: false,
+  });
 
   useEffect(() => {
     AOS.init();
@@ -19,7 +25,12 @@ const ContactForm = () => {
 
   const changeNameHandler = (e) => {
     const value = e.target.value;
-    if (value.trim()) setFormData({ ...formData, name: value });
+    if (value.trim()) {
+      setInValidInput({ ...inValidInput, name: false });
+      setFormData({ ...formData, name: value });
+    } else {
+      setInValidInput({ ...inValidInput, name: true });
+    }
   };
   const changeEmailHandler = (e) => {
     const value = e.target.value;
@@ -32,21 +43,50 @@ const ContactForm = () => {
   };
   const changeSubjectHandler = (e) => {
     const value = e.target.value;
-    if (value.trim()) setFormData({ ...formData, subject: value });
+    if (value.trim()) {
+      setInValidInput({ ...inValidInput, subject: false });
+      setFormData({ ...formData, subject: value });
+    } else {
+      setInValidInput({ ...inValidInput, subject: true });
+    }
   };
   const changeMessageHandler = (e) => {
     const value = e.target.value;
-    if (value.trim()) setFormData({ ...formData, message: value });
+    if (value.trim()) {
+      setInValidInput({ ...inValidInput, message: false });
+      setFormData({ ...formData, message: value });
+    } else {
+      setInValidInput({ ...inValidInput, message: true });
+    }
   };
   const submitFormHanler = (e) => {
     e.preventDefault();
-    if (formData.name && formData.subject && formData.message) {
-      if (!formData.email) alert("Invalid Email");
-      else {
+    if (
+      !formData.name ||
+      !formData.message ||
+      !formData.subject ||
+      !formData.email ||
+      formData.name.length < 2 ||
+      formData.message < 2 ||
+      formData.subject < 2
+    ) {
+      setInValidInput({
+        name: !formData.name,
+        message: !formData.message,
+        subject: !formData.subject,
+      });
+      if (
+        !inValidInput.email ||
+        !inValidInput.message ||
+        !inValidInput.subject
+      ) {
+        if (!formData.email) {
+          setInValidEmail(true);
+          console.log("error");
+        }
+      } else {
         console.log(formData);
       }
-    } else {
-      alert("Fill all the Fields");
     }
   };
 
@@ -61,80 +101,94 @@ const ContactForm = () => {
       }}
     >
       <FormInput
+        tooltipTxt="Input is Empty"
+        tooltip={inValidInput.name}
         classes="form-control"
         type="text"
+        w={{ width: "47%", minWidth: "47%" }}
         styles={{
-          minWidth: "47%",
           padding: "1.6rem",
           background: "RGB(248, 248, 248)",
           borderRadius: "5px",
           borderWidth: "0",
-          width: "47%",
         }}
-        placeholder="Name*"
+        placeholder="Name"
         onchange={(e) => {
           changeNameHandler(e);
         }}
       />
       <FormInput
+        pattern=" /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+        tooltip={inValidEmail}
+        tooltipTxt="Invalid Email"
         classes="form-control"
         type="text"
+        w={{ width: "47%", minWidth: "47%" }}
         styles={{
-          "min-width": "47%",
           padding: "1.6rem",
           background: "RGB(248, 248, 248)",
-          "border-radius": "5px",
-          "border-width": "0",
-          width: "47%",
+          borderRadius: "5px",
+          borderWidth: "0",
+          width: "100%",
         }}
-        placeholder="Email*"
+        placeholder="Email"
         onchange={(e) => {
           changeEmailHandler(e);
         }}
       />
       <FormInput
+        tooltipTxt="Input is Empty"
+        tooltip={inValidInput.subject}
         classes="form-control"
         type="text"
+        w={{ width: "100%", minWidth: "100%" }}
         styles={{
-          "min-width": "98%",
+          width: "100%",
           margin: "1.5rem 0",
           padding: "1.6rem",
           background: "RGB(248, 248, 248)",
-          "border-radius": "5px",
-          "border-width": "0",
+          borderRadius: "5px",
+          borderWidth: "0",
         }}
         placeholder="Subject"
         onchange={(e) => {
           changeSubjectHandler(e);
         }}
       />
-      <textarea
-        className="form-control"
-        style={{
-          "min-height": "160px",
-          padding: "1.6rem",
-          background: "RGB(248, 248, 248)",
-          "border-radius": "5px",
-          "border-width": "0",
-        }}
-        placeholder="Message"
-        onChange={(e) => {
-          changeMessageHandler(e);
-        }}
-      ></textarea>
+      <div style={{ position: "relative", width: "100%" }}>
+        <textarea
+          className="form-control"
+          style={{
+            minHeight: "160px",
+            padding: "1.6rem",
+            background: "RGB(248, 248, 248)",
+            borderRadius: "5px",
+            borderWidth: "0",
+            width: "100%",
+          }}
+          placeholder="Message"
+          onChange={(e) => {
+            changeMessageHandler(e);
+          }}
+        ></textarea>
+        <span
+          className="tooltiptext"
+          style={{ visibility: inValidInput.message ? "visible" : "hidden" }}
+        >
+          Input is Empty
+        </span>
+      </div>
       <button
         className="btn btn-primary form-btn"
         style={{
           padding: "1rem 1.6rem",
-          "border-radius": "5px",
-          background:
-            "linear-gradient(45deg, RGB(100, 100, 232), RGB(151, 120, 241)), #7c82fe",
-          "font-weight": "bold",
-          "letter-spacing": "1px",
-          "font-size": "15px",
-          "border-color": "#888888",
+          borderRadius: "5px",
+          fontWeight: "bold",
+          letterSpacing: "1px",
+          fontSize: "15px",
+          borderColor: "#888888",
           margin: "1.5rem 0",
-          "margin-left": "1.2rem",
+          marginLeft: "1.2rem",
         }}
       >
         Send message

@@ -2,6 +2,16 @@ import React from "react";
 import "../assets/css/styles.css";
 
 const Footer = () => {
+  const footerLinksOne = [
+    { text: "About US", hRef: "index.html" },
+    { text: "Online Check in", hRef: "index.html" },
+    { text: "Before you go", hRef: "index.html" },
+  ];
+  const footerLinksTwo = [
+    { text: "Where To Find Us", hRef: "index.html" },
+    { text: "Terms of Payment", hRef: "index.html" },
+    { text: "Privaacy Policy", hRef: "index.html" },
+  ];
   return (
     <footer
       style={{
@@ -67,55 +77,23 @@ const Footer = () => {
           >
             Who we are
           </h2>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            About us
-          </a>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            Before you go
-          </a>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              color: "RGB(188, 188, 214)",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            Online check in
-          </a>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            FAQ
-          </a>
+          {footerLinksOne.map((link, index) => {
+            return (
+              <a
+                key={index}
+                className="footer-nav-links"
+                href={link.hRef}
+                style={{
+                  display: "block",
+                  fontWeight: "bold",
+                  marginBottom: "0.5rem",
+                  fontSize: "15px",
+                }}
+              >
+                {link.text}
+              </a>
+            );
+          })}
         </div>
         <div
           style={{ width: "auto", margin: "0.8rem 0", padding: "1rem 2rem" }}
@@ -131,42 +109,23 @@ const Footer = () => {
           >
             Quick links
           </h2>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            Terms of Payment
-          </a>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            Privacy Policy
-          </a>
-          <a
-            className="footer-nav-links"
-            href="index.html"
-            style={{
-              display: "block",
-              fontWeight: "bold",
-              marginBottom: "0.5rem",
-              fontSize: "15px",
-            }}
-          >
-            Where to Find Us
-          </a>
+          {footerLinksTwo.map((link, index) => {
+            return (
+              <a
+                key={index}
+                className="footer-nav-links"
+                href={link.hRef}
+                style={{
+                  display: "block",
+                  fontWeight: "bold",
+                  marginBottom: "0.5rem",
+                  fontSize: "15px",
+                }}
+              >
+                {link.text}
+              </a>
+            );
+          })}
         </div>
       </div>
       <div
@@ -202,7 +161,7 @@ const Footer = () => {
               borderColor: "var(--gray)",
             }}
           >
-            <i class="fab fa-twitter"></i>
+            <i className="fab fa-twitter"></i>
           </a>
           <a
             href="index.html"
@@ -218,7 +177,7 @@ const Footer = () => {
               borderColor: "var(--gray)",
             }}
           >
-            <i class="fab fa-instagram"></i>
+            <i className="fab fa-instagram"></i>
           </a>
           <a
             href="index.html"

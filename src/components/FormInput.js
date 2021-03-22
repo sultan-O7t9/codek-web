@@ -1,20 +1,35 @@
 import React from "react";
+import "../assets/css/styles.css";
 
-const FormInput = ({ type, styles, classes, placeholder, onchange }) => {
+const FormInput = ({
+  type,
+  styles,
+  classes,
+  placeholder,
+  onchange,
+  w,
+  tooltip,
+  tooltipTxt,
+  pattern,
+}) => {
   return (
-    <input
-      className={classes}
-      type={type}
-      style={styles}
-      placeholder={placeholder}
-      defaultValue=""
-      onChange={onchange}
-      // onSelect={(e) => {
-      //   if (!e.target.value.trim()) {
-      //     e.target.style.background = "#fb8181";
-      //   }
-      // }}
-    />
+    <div style={{ width: w.width, minWidth: w.minWidth, position: "relative" }}>
+      <input
+        requiredPattern={pattern}
+        className={classes}
+        type={type}
+        style={styles}
+        placeholder={placeholder}
+        defaultValue={null}
+        onChange={onchange}
+      />
+      <span
+        className="tooltiptext"
+        style={{ visibility: tooltip ? "visible" : "hidden" }}
+      >
+        {tooltipTxt}
+      </span>
+    </div>
   );
 };
 

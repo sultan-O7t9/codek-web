@@ -18,7 +18,7 @@ const Service = (props) => {
       className="d-flex flex-column align-items-center service"
       style={{
         width: "98",
-        "min-height": "100px",
+        minHeight: "100px",
         padding: "1rem",
         borderRadius: "50px",
       }}
@@ -27,10 +27,10 @@ const Service = (props) => {
       <h4
         className="text-center"
         style={{
-          "font-size": "1.125rem",
+          fontSize: "1.125rem",
           margin: "14px",
-          "font-weight": "bold",
-          "margin-bottom": "0",
+          fontWeight: "bold",
+          marginBottom: "0",
           color: "RGB(113, 116, 152)",
         }}
       >
@@ -39,9 +39,9 @@ const Service = (props) => {
       <p
         className="text-center"
         style={{
-          "font-size": "15px",
-          "font-weight": "normal",
-          "max-width": "220px",
+          fontSize: "15px",
+          fontWeight: "normal",
+          maxWidth: "220px",
           color: "var(--gray)",
         }}
       >

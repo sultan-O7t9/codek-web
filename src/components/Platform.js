@@ -37,8 +37,8 @@ const Platform = (props) => {
       </div>
       <h1
         style={{
-          "font-size": "15px",
-          "font-weight": "bold",
+          fontSize: "15px",
+          fontWeight: "bold",
           color: "var(--gray)",
         }}
       >

@@ -21,11 +21,11 @@ const Testimonials = () => {
         data-aos-offset="100px"
         className="text-center"
         style={{
-          "font-size": "2.625rem",
-          "min-width": "auto",
-          "max-width": "700px",
+          fontSize: "2.625rem",
+          minWidth: "auto",
+          maxWidth: "700px",
           color: "RGB(47, 50, 129)",
-          "font-weight": "bold",
+          fontWeight: "bold",
         }}
       >
         A reliable top-rated company
@@ -36,10 +36,10 @@ const Testimonials = () => {
         data-aos-offset="100px"
         className="d-flex justify-content-center"
         style={{
-          "font-weight": "bold",
+          fontWeight: "bold",
           color: "var(--gray)",
-          "margin-bottom": "2rem",
-          "text-align": "center",
+          marginBottom: "2rem",
+          textAlign: "center",
         }}
       >
         We deliver the best services for app design &amp; coding
@@ -50,17 +50,7 @@ const Testimonials = () => {
         data-aos-offset="100px"
         className="btn btn-primary testimonial-btn"
         type="button"
-        style={{
-          padding: "1rem 1.6rem",
-          borderRadius: "5px",
-          background:
-            "linear-gradient(45deg, RGB(100, 100, 232), RGB(151, 120, 241)), #7c82fe",
-          fontWeight: "bold",
-          letterSpacing: "1px",
-          fontSize: "15px",
-          borderColor: "#888888",
-          marginLeft: "1.2rem",
-        }}
+        style={{}}
       >
         What clients say about us
       </button>

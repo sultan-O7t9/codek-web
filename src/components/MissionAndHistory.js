@@ -54,7 +54,7 @@ const MissionAndHistory = () => {
   return (
     <section
       className="msn-hstry element-animation d-flex flex-column align-items-md-center align-items-lg-center"
-      style={{ background: "var(--white);" }}
+      style={{ background: "var(--white)" }}
     >
       <h1
         data-aos="fade-up"

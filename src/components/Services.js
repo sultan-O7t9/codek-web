@@ -68,9 +68,9 @@ const Services = () => {
         data-aos-offset="100px"
         className="text-center"
         style={{
-          "font-size": "2.625rem",
-          "max-width": "700px",
-          "font-weight": "bold",
+          fontSize: "2.625rem",
+          maxWidth: "700px",
+          fontWeight: "bold",
           color: "RGB(44, 48, 120)",
         }}
       >

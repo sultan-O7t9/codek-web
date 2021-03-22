@@ -21,7 +21,7 @@ const Contact = () => {
                   data-aos="fade-up"
                   data-aos-duration="1000"
                   data-aos-offset="100px"
-                  style={{ "font-size": "2.625rem", color: "RGB(44, 48, 120)" }}
+                  style={{ fontSize: "2.625rem", color: "RGB(44, 48, 120)" }}
                 >
                   Be our parteners!
                 </h3>
@@ -30,8 +30,8 @@ const Contact = () => {
                   data-aos-duration="1000"
                   data-aos-offset="100px"
                   style={{
-                    "font-size": "15px",
-                    "font-weight": "bold",
+                    fontSize: "15px",
+                    fontWeight: "bold",
                     color: "var(--gray)",
                   }}
                 >
@@ -50,6 +50,7 @@ const Contact = () => {
               style={{ width: "100%", padding: "0" }}
             >
               <img
+                className="elementToAnimate"
                 alt=""
                 src={formImg}
                 style={{ width: "100%", height: "auto" }}

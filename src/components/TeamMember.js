@@ -28,9 +28,10 @@ const TeamMember = ({ member }) => {
           className="btn-group d-lg-flex justify-content-lg-center align-items-lg-center"
           role="group"
         >
-          {member.links.map((link) => {
+          {member.links.map((link, index) => {
             return (
               <a
+                key={index}
                 href={link.hRef}
                 className="btn btn-primary team-mmbr-icon-link"
                 style={{
@@ -45,7 +46,7 @@ const TeamMember = ({ member }) => {
                   alignItems: "center",
                 }}
               >
-                <i class={link.icon}></i>
+                <i className={link.icon}></i>
               </a>
             );
           })}

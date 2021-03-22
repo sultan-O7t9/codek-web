@@ -88,8 +88,8 @@ const Team = () => {
         data-aos-duration="1000"
         data-aos-offset="100px"
       >
-        {team.map((mmbr) => {
-          return <TeamMember member={mmbr} />;
+        {team.map((mmbr, index) => {
+          return <TeamMember key={index} member={mmbr} />;
         })}
         {/*  */}
       </div>

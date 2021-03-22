@@ -8,7 +8,7 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
     >
       <div className="d-sm-flex" style={{ width: "55%" }}>
         <img
-          className="d-sm-flex"
+          className="d-sm-flex elementToAnimate"
           src={content.imgSrc}
           alt=""
           style={{ width: "100%" }}
@@ -27,32 +27,15 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
           <br />
         </p>
         <ul style={{ marginBottom: "2.2rem", marginRight: "2.2rem" }}>
-          {content.list.map((listItem) => {
+          {content.list.map((listItem, index) => {
             return (
-              <li style={{ color: "var(--gray)" }}>
+              <li key={index} style={{ color: "var(--gray)" }}>
                 {listItem.text}
                 <br />
               </li>
             );
           })}
         </ul>
-        {/* <button
-              className="btn btn-primary"
-              type="button"
-              style={{
-                padding: "0.8rem 1.6rem",
-                borderRadius: "5px",
-                background:
-                  "linear-gradient(45deg, RGB(100, 100, 232), RGB(151, 120, 241)), #7c82fe",
-                fontWeight: "bold",
-                letterSpacing: "1px",
-                fontSize: " 15px",
-                borderColor: "#888888",
-                marginLeft: "1.2rem",
-              }}
-            >
-              Learn More
-            </button> */}
       </div>
     </div>
   );

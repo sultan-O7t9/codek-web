@@ -69,9 +69,9 @@ const Platforms = () => {
         data-aos-offset="100px"
         className="d-flex"
         style={{
-          "font-size": "2.625rem",
-          "font-weight": "bold",
-          "text-align": "center",
+          fontSize: "2.625rem",
+          fontWeight: "bold",
+          textAlign: "center",
           color: "RGB(44, 48, 120)",
         }}
       >
@@ -83,9 +83,9 @@ const Platforms = () => {
         data-aos-offset="100px"
         className="d-flex"
         style={{
-          "font-size": "15px",
+          fontSize: "15px",
           color: "var(--gray)",
-          "font-weight": "bold",
+          fontWeight: "bold",
         }}
       >
         <br />
@@ -97,7 +97,7 @@ const Platforms = () => {
       <div style={{ width: "100%" }}>
         <Container
           containerClasses="container d-flex d-sm-flex justify-content-center justify-content-sm-center"
-          styles={{ "min-height": "100px", width: "100%" }}
+          styles={{ minHeight: "100px", width: "100%" }}
         >
           <Row rowClasses="row" styles={{ width: "100%", height: "100%" }}>
             {platforms.map((platform, index) => {
@@ -113,7 +113,7 @@ const Platforms = () => {
                     animeDelay={platform.animeDelay}
                   >
                     <i
-                      class={platform.icon}
+                      className={platform.icon}
                       style={{ color: platform.color }}
                     ></i>
                   </Platform>

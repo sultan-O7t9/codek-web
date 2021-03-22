@@ -1,6 +1,13 @@
 import React from "react";
+import NavbarLink from "./NavbarLink";
 
 const Navbar = () => {
+  const navLinks = [
+    { text: "HOME", href: "#home" },
+    { text: "SERVICES", href: "#services" },
+    { text: "PALTFORMS", href: "#platforms" },
+    { text: "CONTACT", href: "#contact" },
+  ];
   return (
     <nav
       className="navbar navbar-light navbar-expand-md sticky-top"
@@ -36,58 +43,15 @@ const Navbar = () => {
             className="navbar-nav d-md-flex align-items-md-center"
             style={{ margin: "0" }}
           >
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                href="#home"
-                style={{
-                  color: "var(--white)",
-                  fontWeight: "bold",
-                  marginLeft: "1rem",
-                }}
-              >
-                HOME
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                href="#services"
-                style={{
-                  color: "var(--white)",
-                  fontWeight: "bold",
-                  marginLeft: "1rem",
-                }}
-              >
-                SERVICES
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                href="#platforms"
-                style={{
-                  color: "var(--white)",
-                  fontWeight: "bold",
-                  marginLeft: "1rem",
-                }}
-              >
-                PLATFORMS
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                href="#contact"
-                style={{
-                  color: "var(--white)",
-                  fontWeight: "bold",
-                  marginLeft: "1rem",
-                }}
-              >
-                CONTACT
-              </a>
-            </li>
+            {/*  */}
+            {navLinks.map((navLink, index) => {
+              return (
+                <li key={index} className="nav-item">
+                  <NavbarLink text={navLink.text} href={navLink.href} />
+                </li>
+              );
+            })}
+            {/*  */}
             <li className="nav-item">
               <a
                 href="#contact"

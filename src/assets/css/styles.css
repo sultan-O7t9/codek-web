@@ -108,11 +108,64 @@ a {
 .form-btn,
 .testimonial-btn {
   transition: all 0.35s ease;
+  background: linear-gradient(45deg, RGB(100, 100, 232), RGB(151, 120, 241)),
+    #7c82fe;
 }
+.testimonial-btn {
+  padding: 1rem 1.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 15px;
+  border-color: #888888;
+  margin-left: 1.2rem;
+}
+
 .form-btn:hover,
 .testimonial-btn:hover {
-  transform: translateY(-5px);
+  background: linear-gradient(-45deg, RGB(100, 100, 232), RGB(151, 120, 241)),
+    #7c82fe;
 }
-.spacer {
-  pointer-events: none;
+
+/*  */
+@keyframes yourAnimation {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.elementToAnimate {
+  animation: yourAnimation 2s infinite 0s ease-in-out alternate;
+}
+.tooltiptext {
+  font-size: 0.8rem;
+  visibility: hidden;
+  width: 130px;
+  background-color: rgb(255, 146, 146);
+  color: white;
+  text-align: center;
+  padding: 0.4rem 0;
+  border-radius: 3px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  /*  */
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+.tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(255, 146, 146) transparent;
 }

@@ -25,9 +25,9 @@ const WaveAnimation = () => {
           d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z"
         />
       </defs>
-      <use id="wave2" class="wave" href="#wave" x="0" y="0"></use>
+      <use id="wave2" className="wave" href="#wave" x="0" y="0"></use>
 
-      <g class="gooeff" filter="url(#goo)"></g>
+      <g className="gooeff" filter="url(#goo)"></g>
     </svg>
     // </div>
   );

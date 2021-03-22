@@ -16,26 +16,26 @@ const HeroSection = () => {
       <div className="d-flex">
         <div
           className="d-lg-flex justify-content-lg-end align-items-lg-start"
-          style={{ width: "50%", height: "auto", "min-height": "50vw" }}
+          style={{ width: "50%", height: "auto", minHeight: "50vw" }}
         >
           <div
             style={{
               width: "90%",
               color: "rgba(249,245,245,0.1)",
               margin: "1rem",
-              "margin-left": "2rem",
+              marginLeft: "2rem",
             }}
           >
             <h1
               style={{
-                "border-color": "var(--white)",
+                borderColor: "var(--white)",
                 margin: "0px",
                 color: "var(--white)",
                 height: "200px",
-                "font-size": "3rem",
-                "font-weight": "bold",
-                "max-width": "400px",
-                "padding-bottom": "0",
+                fontSize: "3rem",
+                fontWeight: "bold",
+                maxWidth: "400px",
+                paddingBottom: "0",
               }}
             >
               <br />
@@ -48,9 +48,9 @@ const HeroSection = () => {
               style={{
                 margin: "0px",
                 color: "var(--white)",
-                "font-weight": "normal",
-                "line-height": "24px",
-                "max-width": "400px",
+                fontWeight: "normal",
+                lineHeight: "24px",
+                maxWidth: "400px",
                 padding: "0",
               }}
             >
@@ -86,18 +86,12 @@ const HeroSection = () => {
             <img
               src={heroSection}
               alt=""
+              className="elementToAnimate"
               style={{ width: "100%", height: "100%" }}
             />
           </div>
         </div>
       </div>
-      {/* <WaveAnimation />
-      <Spacer
-        height="16vh"
-        width="100vw"
-        background="var(--white)"
-        style={{ position: "absolute", bottom: 0 }}
-      /> */}
     </section>
   );
 };
