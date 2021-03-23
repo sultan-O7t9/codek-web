@@ -60,7 +60,6 @@ const Platforms = () => {
   return (
     <section
       className="d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
-      id="platforms"
       style={{ background: "var(--white)" }}
     >
       <h1

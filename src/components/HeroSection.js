@@ -1,11 +1,11 @@
 import React from "react";
 import heroSection from "../assets/img/heroSection.png";
+import WaveAnimation from "./WaveAnimation";
 import "../assets/css/styles.css";
 
 const HeroSection = () => {
   return (
     <section
-      id="hero-section"
       style={{
         width: "100",
         height: "auto",
@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="d-flex">
         <div
           className="d-lg-flex justify-content-lg-end align-items-lg-start"
-          style={{ width: "50%", height: "auto", minHeight: "50vw" }}
+          style={{ width: "50%", height: "auto", minHeight: "30vw" }}
         >
           <div
             style={{
@@ -78,6 +78,7 @@ const HeroSection = () => {
         >
           <div
             style={{
+              marginTop: "16vh",
               width: "90%",
               color: "rgba(249,245,245,0.1)",
               height: "50vw",
@@ -86,12 +87,13 @@ const HeroSection = () => {
             <img
               src={heroSection}
               alt=""
-              className="elementToAnimate"
+              className="elementToAnimateTwo"
               style={{ width: "100%", height: "100%" }}
             />
           </div>
         </div>
       </div>
+      <WaveAnimation />
     </section>
   );
 };

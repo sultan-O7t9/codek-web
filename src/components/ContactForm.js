@@ -12,82 +12,49 @@ const ContactForm = () => {
     subject: null,
     message: null,
   });
-  const [inValidEmail, setInValidEmail] = useState(false);
   const [inValidInput, setInValidInput] = useState({
     name: false,
+    email: false,
     subject: false,
     message: false,
   });
+  // const [inValidEmail, setInValidEmail] = useState(false);
+  const handleUserInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    if (value.trim) {
+      setInValidInput({ ...inValidInput, [name]: !value });
+      setFormData({ ...formData, [name]: value });
+    } else {
+      setInValidInput({ ...inValidInput, [name]: !value });
+    }
+  };
+  const handleUserEmail = (e) => {
+    const mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const name = e.target.name;
+    const value = e.target.value;
+    if (value.trim) {
+      setInValidInput({ ...inValidInput, [name]: !value });
+      if (value.match(mailFormat)) {
+        // setInValidEmail(false);
+        setFormData({ ...formData, [name]: value });
+      } else {
+        // setInValidEmail(true);
+      }
+    } else {
+      setInValidInput({ ...inValidInput, [name]: !value });
+    }
+  };
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const changeNameHandler = (e) => {
-    const value = e.target.value;
-    if (value.trim()) {
-      setInValidInput({ ...inValidInput, name: false });
-      setFormData({ ...formData, name: value });
-    } else {
-      setInValidInput({ ...inValidInput, name: true });
-    }
-  };
-  const changeEmailHandler = (e) => {
-    const value = e.target.value;
-    const mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (value.trim()) {
-      if (value.match(mailFormat)) {
-        setFormData({ ...formData, email: value });
-      }
-    }
-  };
-  const changeSubjectHandler = (e) => {
-    const value = e.target.value;
-    if (value.trim()) {
-      setInValidInput({ ...inValidInput, subject: false });
-      setFormData({ ...formData, subject: value });
-    } else {
-      setInValidInput({ ...inValidInput, subject: true });
-    }
-  };
-  const changeMessageHandler = (e) => {
-    const value = e.target.value;
-    if (value.trim()) {
-      setInValidInput({ ...inValidInput, message: false });
-      setFormData({ ...formData, message: value });
-    } else {
-      setInValidInput({ ...inValidInput, message: true });
-    }
-  };
   const submitFormHanler = (e) => {
     e.preventDefault();
-    if (
-      !formData.name ||
-      !formData.message ||
-      !formData.subject ||
-      !formData.email ||
-      formData.name.length < 2 ||
-      formData.message < 2 ||
-      formData.subject < 2
-    ) {
-      setInValidInput({
-        name: !formData.name,
-        message: !formData.message,
-        subject: !formData.subject,
-      });
-      if (
-        !inValidInput.email ||
-        !inValidInput.message ||
-        !inValidInput.subject
-      ) {
-        if (!formData.email) {
-          setInValidEmail(true);
-          console.log("error");
-        }
-      } else {
-        console.log(formData);
-      }
-    }
+    if (formData.email && formData.name && formData.subject && formData.message)
+      console.log(formData);
+    else console.error("Tu mera putr chutti kr");
   };
 
   return (
@@ -101,8 +68,9 @@ const ContactForm = () => {
       }}
     >
       <FormInput
-        tooltipTxt="Input is Empty"
-        tooltip={inValidInput.name}
+        // tooltipTxt="Input is Empty"
+        // tooltip={inValidInput.name}
+        name="name"
         classes="form-control"
         type="text"
         w={{ width: "47%", minWidth: "47%" }}
@@ -114,15 +82,16 @@ const ContactForm = () => {
         }}
         placeholder="Name"
         onchange={(e) => {
-          changeNameHandler(e);
+          handleUserInput(e);
         }}
       />
       <FormInput
-        pattern=" /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-        tooltip={inValidEmail}
-        tooltipTxt="Invalid Email"
+        // pattern={VALID_EMAIL}
+        // tooltip={inValidInput.email || inValidEmail}
+        // tooltipTxt={inValidInput.email ? "Input is Empty" : "Invalid Email"}
+        name="email"
         classes="form-control"
-        type="text"
+        type="email"
         w={{ width: "47%", minWidth: "47%" }}
         styles={{
           padding: "1.6rem",
@@ -133,14 +102,15 @@ const ContactForm = () => {
         }}
         placeholder="Email"
         onchange={(e) => {
-          changeEmailHandler(e);
+          handleUserEmail(e);
         }}
       />
       <FormInput
-        tooltipTxt="Input is Empty"
-        tooltip={inValidInput.subject}
+        // tooltipTxt="Input is Empty"
+        // tooltip={inValidInput.subject}
         classes="form-control"
         type="text"
+        name="subject"
         w={{ width: "100%", minWidth: "100%" }}
         styles={{
           width: "100%",
@@ -152,11 +122,13 @@ const ContactForm = () => {
         }}
         placeholder="Subject"
         onchange={(e) => {
-          changeSubjectHandler(e);
+          handleUserInput(e);
         }}
       />
       <div style={{ position: "relative", width: "100%" }}>
         <textarea
+          required={true}
+          name="message"
           className="form-control"
           style={{
             minHeight: "160px",
@@ -168,15 +140,15 @@ const ContactForm = () => {
           }}
           placeholder="Message"
           onChange={(e) => {
-            changeMessageHandler(e);
+            handleUserInput(e);
           }}
         ></textarea>
-        <span
+        {/* <span
           className="tooltiptext"
           style={{ visibility: inValidInput.message ? "visible" : "hidden" }}
         >
           Input is Empty
-        </span>
+        </span> */}
       </div>
       <button
         className="btn btn-primary form-btn"

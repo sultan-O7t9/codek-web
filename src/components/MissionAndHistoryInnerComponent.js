@@ -6,12 +6,12 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
       className=" d-flex d-sm-flex d-md-flex d-lg-flex flex-row align-items-start flex-wrap justify-content-sm-center align-items-lg-center"
       style={{ padding: "2rem 1rem" }}
     >
-      <div className="d-sm-flex" style={{ width: "55%" }}>
+      <div className="d-sm-flex" style={{ width: "50%" }}>
         <img
           className="d-sm-flex elementToAnimate"
           src={content.imgSrc}
           alt=""
-          style={{ width: "100%" }}
+          style={{ width: "80%" }}
         />
       </div>
       <div style={{ width: "45%" }}>

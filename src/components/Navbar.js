@@ -3,7 +3,7 @@ import NavbarLink from "./NavbarLink";
 
 const Navbar = () => {
   const navLinks = [
-    { text: "HOME", href: "#home" },
+    { text: "HOME", href: "#hero-section" },
     { text: "SERVICES", href: "#services" },
     { text: "PALTFORMS", href: "#platforms" },
     { text: "CONTACT", href: "#contact" },

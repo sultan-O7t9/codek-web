@@ -11,11 +11,13 @@ const FormInput = ({
   tooltip,
   tooltipTxt,
   pattern,
+  name,
 }) => {
   return (
     <div style={{ width: w.width, minWidth: w.minWidth, position: "relative" }}>
       <input
-        requiredPattern={pattern}
+        required={true}
+        name={name}
         className={classes}
         type={type}
         style={styles}
@@ -23,12 +25,12 @@ const FormInput = ({
         defaultValue={null}
         onChange={onchange}
       />
-      <span
+      {/* <span
         className="tooltiptext"
         style={{ visibility: tooltip ? "visible" : "hidden" }}
       >
         {tooltipTxt}
-      </span>
+      </span> */}
     </div>
   );
 };

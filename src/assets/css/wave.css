@@ -3,11 +3,14 @@
 
  transform: translateY(-60%);
 }*/
+.positioning-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
-svg {
-  transform: translateY(-60%);
-
-  width: 100%;
+.wave-svg {
+  width: 100vw;
   overflow: visible;
 }
 

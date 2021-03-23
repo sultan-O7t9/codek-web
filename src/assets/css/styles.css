@@ -130,7 +130,15 @@ a {
 /*  */
 @keyframes yourAnimation {
   0% {
-    transform: translateY(-100px);
+    transform: translateY(-35px);
+  }
+  100% {
+    transform: translateY(35px);
+  }
+}
+@keyframes yourAnimationTwo {
+  0% {
+    transform: translateY(-70px);
   }
   100% {
     transform: translateY(0px);
@@ -139,6 +147,9 @@ a {
 
 .elementToAnimate {
   animation: yourAnimation 2s infinite 0s ease-in-out alternate;
+}
+.elementToAnimateTwo {
+  animation: yourAnimationTwo 1.5s infinite 0s ease-in-out alternate;
 }
 .tooltiptext {
   font-size: 0.8rem;

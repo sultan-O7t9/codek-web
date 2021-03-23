@@ -1,13 +1,14 @@
 import React from "react";
 
-const Spacer = (props) => {
+const Spacer = ({ id, height, background }) => {
   return (
     <div
+      id={id}
       className="spacer"
       style={{
         width: "100vw",
-        height: props.height,
-        background: props.background,
+        height: height,
+        background: background,
       }}
     ></div>
   );

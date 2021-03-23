@@ -8,7 +8,6 @@ const Contact = () => {
   return (
     <section
       className="d-flex flex-column align-items-lg-center"
-      id="contact"
       style={{ background: "var(--white)" }}
     >
       <div className="container">

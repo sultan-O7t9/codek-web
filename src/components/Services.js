@@ -59,7 +59,6 @@ const Services = () => {
   return (
     <section
       className="d-flex d-md-flex flex-column align-items-center"
-      id="services"
       style={{ background: "white" }}
     >
       <h3
