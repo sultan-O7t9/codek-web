@@ -3,7 +3,10 @@ import "../assets/css/styles.css";
 
 const TeamMember = ({ member }) => {
   return (
-    <div className="card" style={{ borderRadius: "5px", margin: "1rem" }}>
+    <div
+      className="card"
+      style={{ width: "300px", borderRadius: "5px", margin: "1rem" }}
+    >
       <div
         className="card-body d-flex d-lg-flex flex-column align-items-center justify-content-lg-center align-items-lg-center"
         style={{ padding: "1.8rem 2rem", margin: "0" }}

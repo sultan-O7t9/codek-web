@@ -11,7 +11,7 @@ const Testimonials = () => {
   }, []);
   return (
     <section
-      className="d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
+      className="testimonials-section d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
       style={{ background: "RGB(246, 247, 252)" }}
     >
       <Spacer height="12vh" background="rgba(0,0,0,0)" />

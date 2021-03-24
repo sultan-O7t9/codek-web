@@ -1,10 +1,11 @@
 import React from "react";
 
-const Spacer = ({ id, height, background }) => {
+const Spacer = ({ id, height, background, classes }) => {
+  const cls = classes || "";
   return (
     <div
       id={id}
-      className="spacer"
+      className={`spacer ${cls}`}
       style={{
         width: "100vw",
         height: height,

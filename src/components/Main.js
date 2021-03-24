@@ -14,25 +14,49 @@ const Main = () => {
       <main
         style={{
           overflowX: "hidden",
-          marginBottom: "65vh",
           background: "white",
         }}
       >
         <Spacer id="hero-section" height="4vh" background="var(--indigo)" />
         <HeroSection />
-        <Spacer height="4vh" id="services" background="var(--indigo)" />
+        <Spacer height="4vh" id="services" background="var(--white)" />
         <Services />
-        <Spacer id="platforms" height="20vh" background="var(--white)" />
+        <Spacer
+          id="platforms"
+          classes="main-spacer"
+          height="20vh"
+          background="var(--white)"
+        />
         <Platforms />
-        <Spacer height="20vh" id="msn-hstry" background="var(--white)" />
+        <Spacer
+          height="20vh"
+          classes="main-spacer"
+          id="msn-hstry"
+          background="var(--white)"
+        />
         <MissionAndHistory />
-        <Spacer height="20vh" id="team" background="var(--white)" />
+        <Spacer
+          height="20vh"
+          classes="main-spacer"
+          id="team"
+          background="rgba(0,0,0,0)"
+        />
         <Team />
-        <Spacer height="20vh" id="testimonials" background="var(--white)" />
+        <Spacer
+          height="20vh"
+          classes="main-spacer"
+          id="testimonials"
+          background="var(--white)"
+        />
         <Testimonials />
-        <Spacer height="20vh" id="contact" background="var(--white)" />
+        <Spacer
+          height="20vh"
+          classes="main-spacer"
+          id="contact"
+          background="var(--white)"
+        />
         <Contact />
-        <Spacer height="20vh" background="var(--white)" />
+        <Spacer height="20vh" classes="main-spacer" background="var(--white)" />
       </main>
     </>
   );

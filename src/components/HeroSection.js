@@ -6,6 +6,7 @@ import "../assets/css/styles.css";
 const HeroSection = () => {
   return (
     <section
+      className="hero-section"
       style={{
         width: "100",
         height: "auto",
@@ -13,20 +14,21 @@ const HeroSection = () => {
         position: "relative",
       }}
     >
-      <div className="d-flex">
+      <div className="d-flex hero-section-container">
         <div
-          className="d-lg-flex justify-content-lg-end align-items-lg-start"
-          style={{ width: "50%", height: "auto", minHeight: "30vw" }}
+          className="d-lg-flex justify-content-lg-end align-items-lg-start hero-section-heading-container"
+          style={{ height: "auto", minHeight: "30vw" }}
         >
           <div
+            className="hero-section-heading-inner-container"
             style={{
               width: "90%",
               color: "rgba(249,245,245,0.1)",
               margin: "1rem",
-              marginLeft: "2rem",
             }}
           >
             <h1
+              className="hero-section-heading"
               style={{
                 borderColor: "var(--white)",
                 margin: "0px",
@@ -41,7 +43,6 @@ const HeroSection = () => {
               <br />
               Get Your Sites
               <br />A Kickstart Now!
-              <br />
               <br />
             </h1>
             <p
@@ -73,8 +74,8 @@ const HeroSection = () => {
           </div>
         </div>
         <div
-          className="d-lg-flex justify-content-lg-end align-items-lg-center"
-          style={{ width: "50%", height: "50vw" }}
+          className="d-lg-flex hero-section-img-continer justify-content-lg-end align-items-lg-center"
+          style={{ height: "50vw" }}
         >
           <div
             style={{

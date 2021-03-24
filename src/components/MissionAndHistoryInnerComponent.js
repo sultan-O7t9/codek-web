@@ -1,4 +1,5 @@
 import React from "react";
+import "../assets/css/styles.css";
 
 const MissionAndHistoryInnerComponent = ({ content }) => {
   return (
@@ -6,7 +7,7 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
       className=" d-flex d-sm-flex d-md-flex d-lg-flex flex-row align-items-start flex-wrap justify-content-sm-center align-items-lg-center"
       style={{ padding: "2rem 1rem" }}
     >
-      <div className="d-sm-flex" style={{ width: "50%" }}>
+      <div className="d-sm-flex msn-img-container">
         <img
           className="d-sm-flex elementToAnimate"
           src={content.imgSrc}
@@ -14,11 +15,10 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
           style={{ width: "80%" }}
         />
       </div>
-      <div style={{ width: "45%" }}>
+      <div className="msn-content">
         <p
           style={{
             maxWidth: "390px",
-            marginLeft: "1.2rem",
             color: "var(--gray)",
           }}
         >
@@ -26,7 +26,7 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
           <br />
           <br />
         </p>
-        <ul style={{ marginBottom: "2.2rem", marginRight: "2.2rem" }}>
+        <ul style={{ marginBottom: "2.2rem" }}>
           {content.list.map((listItem, index) => {
             return (
               <li key={index} style={{ color: "var(--gray)" }}>

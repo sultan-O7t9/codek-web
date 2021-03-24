@@ -26,7 +26,6 @@ const Team = () => {
       job: "Designer",
       img: empImg,
       links: [
-        { hRef: "google.com", icon: "fab fa-instagram" },
         { hRef: "google.com", icon: "fab fa-trello" },
         { hRef: "google.com", icon: "fab fa-twitter" },
       ],
@@ -35,11 +34,7 @@ const Team = () => {
       name: "John Doe",
       job: "Designer",
       img: empImg,
-      links: [
-        { hRef: "google.com", icon: "fab fa-instagram" },
-        { hRef: "google.com", icon: "fab fa-facebook" },
-        { hRef: "google.com", icon: "fab fa-twitter" },
-      ],
+      links: [{ hRef: "google.com", icon: "fab fa-instagram" }],
     },
   ];
   return (

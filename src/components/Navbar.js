@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavbarLink from "./NavbarLink";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Navbar = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const navLinks = [
     { text: "HOME", href: "#hero-section" },
     { text: "SERVICES", href: "#services" },

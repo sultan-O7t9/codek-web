@@ -98,7 +98,10 @@ const Platforms = () => {
           containerClasses="container d-flex d-sm-flex justify-content-center justify-content-sm-center"
           styles={{ minHeight: "100px", width: "100%" }}
         >
-          <Row rowClasses="row" styles={{ width: "100%", height: "100%" }}>
+          <Row
+            rowClasses="row"
+            styles={{ OverflowX: "hidden", width: "100%", height: "100%" }}
+          >
             {platforms.map((platform, index) => {
               return (
                 <Column

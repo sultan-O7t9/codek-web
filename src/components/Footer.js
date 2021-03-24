@@ -19,13 +19,12 @@ const Footer = () => {
         bottom: "0",
         zIndex: "-1",
         width: "100%",
-        maxHeight: "65vh",
         background: "RGB(36, 38, 89)",
         borderTop: "3px solid RGB(88, 89, 181)",
       }}
     >
       <div
-        className="d-flex flex-row"
+        className="d-flex footer-nav-container"
         style={{
           paddingTop: "4.2rem",
           paddingRight: "2.75rem",
@@ -129,7 +128,7 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="d-flex flex-row justify-content-between align-items-lg-center"
+        className="d-flex flex-row justify-content-between align-items-lg-center flex-flex-wrap"
         style={{
           borderTop: "1px solid var(--gray)",
           padding: "1rem 2.75rem",
