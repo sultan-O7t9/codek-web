@@ -2,7 +2,7 @@ a {
   text-emphasis: none;
 }
 section {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .msn-hstry {
