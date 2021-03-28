@@ -7,19 +7,38 @@ import MissionAndHistory from "./MissionAndHistory";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
+import { useMediaQuery } from "react-responsive";
 
 const Main = () => {
+  const is1150 = useMediaQuery({ maxWidth: "1150px" });
+  const isIPADproWidth = useMediaQuery({ maxDeviceWidth: "1024px" });
+  const isIPADpro = useMediaQuery({
+    maxDeviceWidth: "1024px",
+    minDeviceHeight: "1300px",
+  });
+  const isIPAD = useMediaQuery({ maxWidth: "768px" });
+  const is576 = useMediaQuery({ maxWidth: "576px" });
+  const isMobile = useMediaQuery({ maxWidth: "400px" });
   return (
     <>
       <main
         style={{
+          marginBottom: isMobile
+            ? "100vh"
+            : is576
+            ? "100vh"
+            : isIPAD
+            ? "40vh"
+            : isIPADproWidth
+            ? "30vh"
+            : "65vh",
           overflowX: "hidden",
           background: "white",
         }}
       >
-        <Spacer id="hero-section" height="4vh" background="var(--indigo)" />
+        {/* <Spacer height={is576 ? "0" : "6vh"} background="var(--indigo)" /> */}
         <HeroSection />
-        <Spacer height="4vh" id="services" background="var(--white)" />
+        <Spacer height="86px" id="services" background="var(--white)" />
         <Services />
         <Spacer
           id="platforms"
@@ -50,7 +69,7 @@ const Main = () => {
         />
         <Testimonials />
         <Spacer
-          height="20vh"
+          height="86px"
           classes="main-spacer"
           id="contact"
           background="var(--white)"

@@ -1,18 +1,24 @@
 import React, { useEffect } from "react";
 import Spacer from "./Spacer";
 import "../assets/css/styles.css";
+import { useMediaQuery } from "react-responsive";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Testimonials = () => {
+  const isMobile = useMediaQuery({ maxWidth: "400px" });
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <section
-      className="testimonials-section d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
-      style={{ background: "RGB(246, 247, 252)" }}
+      className=" d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
+      style={{
+        background: "RGB(246, 247, 252)",
+        padding: isMobile ? "1rem" : "initial",
+      }}
     >
       <Spacer height="12vh" background="rgba(0,0,0,0)" />
       <h1

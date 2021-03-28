@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarLink from "./NavbarLink";
 
 import AOS from "aos";
@@ -8,13 +8,18 @@ const Navbar = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  const [active, setActive] = useState("");
 
-  const navLinks = [
-    { text: "HOME", href: "#hero-section" },
+  const [navLinks, setNavLinks] = useState([
+    {
+      text: "HOME",
+      href: "#home",
+    },
     { text: "SERVICES", href: "#services" },
     { text: "PALTFORMS", href: "#platforms" },
     { text: "CONTACT", href: "#contact" },
-  ];
+  ]);
+
   return (
     <nav
       className="navbar navbar-light navbar-expand-md sticky-top"
@@ -53,8 +58,21 @@ const Navbar = () => {
             {/*  */}
             {navLinks.map((navLink, index) => {
               return (
-                <li key={index} className="nav-item">
-                  <NavbarLink text={navLink.text} href={navLink.href} />
+                <li
+                  key={index}
+                  className="nav-item"
+                  onClick={() => {
+                    setActive(navLink.text);
+                  }}
+                >
+                  <NavbarLink
+                    classes={
+                      active == navLink.text ? "active-link" : "not-active"
+                    }
+                    isActive={active}
+                    text={navLink.text}
+                    href={navLink.href}
+                  />
                 </li>
               );
             })}

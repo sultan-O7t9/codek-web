@@ -2,33 +2,59 @@ import React from "react";
 import heroSection from "../assets/img/heroSection.png";
 import WaveAnimation from "./WaveAnimation";
 import "../assets/css/styles.css";
+import { useMediaQuery } from "react-responsive";
 
 const HeroSection = () => {
+  const is1150 = useMediaQuery({ minWidth: "1150px" });
+  const isIPADpro = useMediaQuery({
+    maxDeviceWidth: "1024px",
+    minDeviceHeight: "1300px",
+  });
+  const isIPAD = useMediaQuery({ maxWidth: "768px" });
+  const is576 = useMediaQuery({ maxWidth: "576px" });
+  const isMobile = useMediaQuery({ maxWidth: "400px" });
   return (
     <section
-      className="hero-section"
       style={{
-        width: "100",
+        minHeight: is1150
+          ? "80vh"
+          : isIPADpro
+          ? "50vh"
+          : isIPAD
+          ? "70vh"
+          : "80vh",
         height: "auto",
         background: "var(--indigo)",
         position: "relative",
       }}
     >
-      <div className="d-flex hero-section-container">
+      <div
+        className="d-flex "
+        style={{
+          flexDirection: isIPAD ? "column" : "initial",
+          margin: "4rem 0",
+        }}
+      >
         <div
-          className="d-lg-flex justify-content-lg-end align-items-lg-start hero-section-heading-container"
-          style={{ height: "auto", minHeight: "30vw" }}
+          className="d-lg-flex justify-content-lg-end align-items-lg-start "
+          style={{
+            height: "auto",
+            minHeight: "30vw",
+            width: isIPAD ? "100vw" : "50%",
+          }}
         >
           <div
-            className="hero-section-heading-inner-container"
             style={{
               width: "90%",
               color: "rgba(249,245,245,0.1)",
-              margin: "1rem",
+              margin: is576 ? "auto" : "1rem",
+              marginLeft: "2rem",
+              display: isIPAD ? "flex" : "initial",
+              alignItems: "center",
+              flexDirection: "column",
             }}
           >
             <h1
-              className="hero-section-heading"
               style={{
                 borderColor: "var(--white)",
                 margin: "0px",
@@ -36,8 +62,9 @@ const HeroSection = () => {
                 height: "200px",
                 fontSize: "3rem",
                 fontWeight: "bold",
-                maxWidth: "400px",
+                maxWidth: isIPAD ? "100vw" : "400px",
                 paddingBottom: "0",
+                textAlign: isIPAD ? "center" : "initial",
               }}
             >
               <br />
@@ -53,6 +80,7 @@ const HeroSection = () => {
                 lineHeight: "24px",
                 maxWidth: "400px",
                 padding: "0",
+                textAlign: isIPAD ? "center" : "initial",
               }}
             >
               <br />
@@ -74,8 +102,13 @@ const HeroSection = () => {
           </div>
         </div>
         <div
-          className="d-lg-flex hero-section-img-continer justify-content-lg-end align-items-lg-center"
-          style={{ height: "50vw" }}
+          className="d-lg-flex justify-content-lg-end align-items-lg-center"
+          style={{
+            height: "50vw",
+            width: isIPAD ? "100vw" : "50%",
+            display: "flex",
+            justifyContent: isIPAD ? "center" : "end",
+          }}
         >
           <div
             style={{
@@ -83,13 +116,20 @@ const HeroSection = () => {
               width: "90%",
               color: "rgba(249,245,245,0.1)",
               height: "50vw",
+              display: isIPAD ? "flex" : "initial",
+              justifyContent: "center",
             }}
           >
             <img
               src={heroSection}
               alt=""
               className="elementToAnimateTwo"
-              style={{ width: "100%", height: "100%" }}
+              style={{
+                position: "relative",
+                zIndex: "3",
+                width: isIPAD ? "auto" : "100%",
+                height: "100%",
+              }}
             />
           </div>
         </div>

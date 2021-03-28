@@ -1,7 +1,16 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import "../assets/css/styles.css";
 
 const Footer = () => {
+  const is1150 = useMediaQuery({ minWidth: "1150px" });
+  const isIPADpro = useMediaQuery({
+    maxDeviceWidth: "1024px",
+    minDeviceHeight: "1300px",
+  });
+  const isIPAD = useMediaQuery({ maxWidth: "768px" });
+  const is576 = useMediaQuery({ maxWidth: "576px" });
+  const isMobile = useMediaQuery({ maxWidth: "400px" });
   const footerLinksOne = [
     { text: "About US", hRef: "index.html" },
     { text: "Online Check in", hRef: "index.html" },
@@ -26,6 +35,8 @@ const Footer = () => {
       <div
         className="d-flex footer-nav-container"
         style={{
+          flexDirection: is576 ? "column" : "row",
+          alignItems: is576 ? "center" : "initial",
           paddingTop: "4.2rem",
           paddingRight: "2.75rem",
           paddingLeft: "2.75rem",

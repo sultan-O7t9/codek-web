@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const NavbarLink = ({ text, href, children }) => {
+const NavbarLink = ({ text, href, children, isActive, classes }) => {
   return (
     <a
-      className="nav-link active"
+      className={`nav-link ${classes}`}
       href={href}
       style={{
         color: "var(--white)",
@@ -11,6 +12,7 @@ const NavbarLink = ({ text, href, children }) => {
         marginLeft: "1rem",
       }}
     >
+      <span className="border"></span>
       {text}
       {children}
     </a>

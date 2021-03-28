@@ -1,14 +1,14 @@
-/* .wave-container {
-  background-color: rgba(0, 0, 0, 0);
-
- transform: translateY(-60%);
-}*/
 .positioning-container {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 5;
 }
-
+@media (max-width: 576px) {
+  .positioning-container {
+    bottom: -10px;
+  }
+}
 .wave-svg {
   width: 100vw;
   overflow: visible;

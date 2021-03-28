@@ -80,7 +80,7 @@ const MissionAndHistory = () => {
           style={{ borderColor: "RGB(237, 237, 237)" }}
         >
           <div
-            className="btn-group msn-hstry-btn-grp"
+            className="btn-group"
             role="group"
             data-aos="fade-up"
             data-aos-duration="1000"

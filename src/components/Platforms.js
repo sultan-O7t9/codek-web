@@ -60,7 +60,7 @@ const Platforms = () => {
   return (
     <section
       className="d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
-      style={{ background: "var(--white)" }}
+      style={{ background: "var(--white)", paddingBottom: "2rem" }}
     >
       <h1
         data-aos="fade-up"

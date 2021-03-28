@@ -4,8 +4,18 @@ import "../assets/css/styles.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useMediaQuery } from "react-responsive";
 
 const ContactForm = () => {
+  const is1150 = useMediaQuery({ minWidth: "1150px" });
+  const isIPADpro = useMediaQuery({
+    maxDeviceWidth: "1024px",
+    minDeviceHeight: "1300px",
+  });
+  const isIPAD = useMediaQuery({ maxWidth: "768px" });
+  const is576 = useMediaQuery({ maxWidth: "576px" });
+  const isMobile = useMediaQuery({ maxWidth: "400px" });
+
   const [formData, setFormData] = useState({
     name: null,
     email: null,
@@ -153,6 +163,7 @@ const ContactForm = () => {
       <button
         className="btn btn-primary form-btn"
         style={{
+          width: isIPAD ? "100%" : "auto",
           padding: "1rem 1.6rem",
           borderRadius: "5px",
           fontWeight: "bold",
