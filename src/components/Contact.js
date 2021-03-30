@@ -17,7 +17,8 @@ const Contact = () => {
 
   return (
     <section
-      className="d-flex flex-column align-items-lg-center"
+      data-title="CONTACT"
+      className="section d-flex flex-column align-items-lg-center"
       style={{
         background: "var(--white)",
         textAlign: isMobile ? "center" : "initial",

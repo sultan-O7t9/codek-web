@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSection from "./HeroSection";
 import Spacer from "./Spacer";
 import Services from "./Services";
@@ -19,6 +19,7 @@ const Main = () => {
   const isIPAD = useMediaQuery({ maxWidth: "768px" });
   const is576 = useMediaQuery({ maxWidth: "576px" });
   const isMobile = useMediaQuery({ maxWidth: "400px" });
+
   return (
     <>
       <main
@@ -38,31 +39,31 @@ const Main = () => {
       >
         {/* <Spacer height={is576 ? "0" : "6vh"} background="var(--indigo)" /> */}
         <HeroSection />
-        <Spacer height="86px" id="services" background="var(--white)" />
         <Services />
         <Spacer
-          id="platforms"
+          id="technologies"
           classes="main-spacer"
-          height="20vh"
+          // height="12vh"
+          height="86px"
           background="var(--white)"
         />
         <Platforms />
         <Spacer
-          height="20vh"
+          height="12vh"
           classes="main-spacer"
           id="msn-hstry"
           background="var(--white)"
         />
         <MissionAndHistory />
         <Spacer
-          height="20vh"
+          height="12vh"
           classes="main-spacer"
           id="team"
           background="rgba(0,0,0,0)"
         />
         <Team />
         <Spacer
-          height="20vh"
+          height="12vh"
           classes="main-spacer"
           id="testimonials"
           background="var(--white)"
@@ -75,7 +76,7 @@ const Main = () => {
           background="var(--white)"
         />
         <Contact />
-        <Spacer height="20vh" classes="main-spacer" background="var(--white)" />
+        <Spacer height="12vh" classes="main-spacer" background="var(--white)" />
       </main>
     </>
   );

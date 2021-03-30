@@ -1,3 +1,6 @@
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(red, yellow);
+}
 a {
   text-emphasis: none;
 }
@@ -168,7 +171,7 @@ section {
 }
 @keyframes yourAnimationTwo {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(-70px);
   }
   100% {
     transform: translateY(0px);

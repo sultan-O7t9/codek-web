@@ -70,7 +70,7 @@ const MissionAndHistory = () => {
         }}
       >
         <br />
-        We design powerful websites for landing your success.
+        We design powerful softwares for landing your success
         <br />
         <br />
       </h1>

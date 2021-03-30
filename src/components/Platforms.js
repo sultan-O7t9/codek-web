@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Column from "./Container/Column";
 import Container from "./Container/Container";
 import Row from "./Container/Row";
-import Platform from "./Platform";
+import Platform from "./Technology";
 import Spacer from "./Spacer";
 import "../assets/css/styles.css";
 
@@ -15,10 +15,10 @@ const Platforms = () => {
   }, []);
   const platforms = [
     {
-      title: "Windows OS",
-      icon: "fab fa-microsoft",
-      color: "#ff9800",
-      background: "#ffe0b2",
+      title: "Wordpress",
+      icon: "fab fa-wordpress",
+      color: "#21759a",
+      background: "#d2e3ea",
       animeDelay: "0",
     },
     {
@@ -59,8 +59,13 @@ const Platforms = () => {
   ];
   return (
     <section
-      className="d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
-      style={{ background: "var(--white)", paddingBottom: "2rem" }}
+      data-title="TECHNOLOGIES"
+      className="section d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center"
+      style={{
+        background: "var(--white)",
+        paddingBottom: "2rem",
+        marginTop: "1rem",
+      }}
     >
       <h1
         data-aos="fade-up"
@@ -74,7 +79,7 @@ const Platforms = () => {
           color: "RGB(44, 48, 120)",
         }}
       >
-        Present over 50 platfroms
+        Technologies we use
       </h1>
       <p
         data-aos="fade-up"
@@ -85,10 +90,11 @@ const Platforms = () => {
           fontSize: "15px",
           color: "var(--gray)",
           fontWeight: "bold",
+          textAlign: "center",
         }}
       >
         <br />
-        We are present over a wide range of social media
+        We use a wide range of latest Technologies to develop your software
         <br />
         <br />
       </p>

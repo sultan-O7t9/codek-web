@@ -15,6 +15,8 @@ const HeroSection = () => {
   const isMobile = useMediaQuery({ maxWidth: "400px" });
   return (
     <section
+      className="section "
+      data-title="HOME"
       style={{
         minHeight: is1150
           ? "80vh"
@@ -23,7 +25,7 @@ const HeroSection = () => {
           : isIPAD
           ? "70vh"
           : "80vh",
-        height: "auto",
+        height: isMobile || isIPAD || is576 || isIPADpro ? "auto" : "110vh",
         background: "var(--indigo)",
         position: "relative",
       }}
@@ -32,7 +34,7 @@ const HeroSection = () => {
         className="d-flex "
         style={{
           flexDirection: isIPAD ? "column" : "initial",
-          margin: "4rem 0",
+          margin: "3rem 0",
         }}
       >
         <div
@@ -60,7 +62,7 @@ const HeroSection = () => {
                 margin: "0px",
                 color: "var(--white)",
                 height: "200px",
-                fontSize: "3rem",
+                fontSize: isMobile ? "2.8rem" : "3rem",
                 fontWeight: "bold",
                 maxWidth: isIPAD ? "100vw" : "400px",
                 paddingBottom: "0",
@@ -68,7 +70,7 @@ const HeroSection = () => {
               }}
             >
               <br />
-              Get Your Sites
+              Get Your Business
               <br />A Kickstart Now!
               <br />
             </h1>
@@ -83,9 +85,8 @@ const HeroSection = () => {
                 textAlign: isIPAD ? "center" : "initial",
               }}
             >
-              <br />
-              There’s no need to be a technical professional to create sites
-              with AeroLand. With simple guides, everything is easy!
+              Our cohesive team creates intelligent and immersive digital
+              experiences
               <br />
               <br />
             </p>
@@ -135,6 +136,17 @@ const HeroSection = () => {
         </div>
       </div>
       <WaveAnimation />
+      <div
+        id="services"
+        style={{
+          background: "rgba(0,0,0,0)",
+          position: "absolute",
+          bottom: "0",
+          left: "0",
+          width: "100%",
+          height: "86px",
+        }}
+      ></div>
     </section>
   );
 };

@@ -23,7 +23,11 @@ const Service = (props) => {
         borderRadius: "50px",
       }}
     >
-      <img src={img} alt="startupboxicon" />
+      <img
+        src={img}
+        style={{ width: "64px", height: "64px" }}
+        alt="startupboxicon"
+      />
       <h4
         className="text-center"
         style={{

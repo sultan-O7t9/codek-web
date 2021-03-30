@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const NavbarLink = ({ text, href, children, isActive, classes }) => {
   return (
     <a
+      data-title={text}
       className={`nav-link ${classes}`}
       href={href}
       style={{

@@ -52,7 +52,8 @@ const Footer = () => {
               fontSize: "15px",
             }}
           >
-            Street 11 ABC, XYZ
+            First Floor, Dhakar Plaza, <br />
+            Rehmaan Shaheed Road, Gujrat
           </p>
           <p
             style={{
@@ -61,7 +62,7 @@ const Footer = () => {
               fontSize: "15px",
             }}
           >
-            Street 11 ABC, XYZ
+            info@codek.tech
           </p>
           <p
             style={{
@@ -70,10 +71,10 @@ const Footer = () => {
               fontSize: "15px",
             }}
           >
-            Street 11 ABC, XYZ
+            0092 316 7189878
           </p>
         </div>
-        <div
+        {/* <div
           style={{ width: " auto", margin: "0.8rem 0", padding: "1rem 2rem" }}
         >
           <h2
@@ -136,7 +137,7 @@ const Footer = () => {
               </a>
             );
           })}
-        </div>
+        </div> */}
       </div>
       <div
         className="d-flex flex-row justify-content-between align-items-lg-center flex-flex-wrap"

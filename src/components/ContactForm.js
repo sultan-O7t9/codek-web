@@ -60,10 +60,41 @@ const ContactForm = () => {
     AOS.init();
   }, []);
 
+  //
+
+  const handleSubmit = (event) => {
+    const templateId = "template_w2cmb1h";
+
+    sendFeedback(templateId, {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    });
+  };
+
+  const sendFeedback = (templateId, variables) => {
+    window.emailjs
+      .send("service_08uduoo", templateId, variables)
+      .then((res) => {
+        console.log("Email successfully sent!");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch((err) =>
+        console.error(
+          "Oh well, you failed. Here some thoughts on the error that occured:",
+          err
+        )
+      );
+  };
+
+  //
+
   const submitFormHanler = (e) => {
     e.preventDefault();
     if (formData.email && formData.name && formData.subject && formData.message)
-      console.log(formData);
+      handleSubmit(e);
     else console.error("Tu mera putr chutti kr");
   };
 
@@ -81,6 +112,7 @@ const ContactForm = () => {
         // tooltipTxt="Input is Empty"
         // tooltip={inValidInput.name}
         name="name"
+        // val={formData.name}
         classes="form-control"
         type="text"
         w={{ width: "47%", minWidth: "47%" }}
@@ -99,6 +131,7 @@ const ContactForm = () => {
         // pattern={VALID_EMAIL}
         // tooltip={inValidInput.email || inValidEmail}
         // tooltipTxt={inValidInput.email ? "Input is Empty" : "Invalid Email"}
+        // val={""}
         name="email"
         classes="form-control"
         type="email"
@@ -119,6 +152,7 @@ const ContactForm = () => {
         // tooltipTxt="Input is Empty"
         // tooltip={inValidInput.subject}
         classes="form-control"
+        // val={formData.subject}
         type="text"
         name="subject"
         w={{ width: "100%", minWidth: "100%" }}
@@ -137,6 +171,7 @@ const ContactForm = () => {
       />
       <div style={{ position: "relative", width: "100%" }}>
         <textarea
+          // value={formData.message}
           required={true}
           name="message"
           className="form-control"

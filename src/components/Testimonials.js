@@ -48,7 +48,7 @@ const Testimonials = () => {
           textAlign: "center",
         }}
       >
-        We deliver the best services for app design &amp; coding
+        We deliver the best services for software design &amp; coding
       </p>
       <button
         data-aos="fade-up"

@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import TeamMember from "./TeamMember";
 import Spacer from "./Spacer";
-import empImg from "../assets/img/avatar-06-140x140.png";
+import empImg from "../assets/img/avatar-02-140x140.png";
+import empImg2 from "../assets/img/avatar-05-140x140.png";
+import empImg3 from "../assets/img/avatar-06-140x140.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,29 +14,71 @@ const Team = () => {
   }, []);
   const team = [
     {
-      name: "John Doe",
-      job: "Designer",
+      name: "Shahzaib Ishaq",
+      job: "CEO",
       img: empImg,
+      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+    },
+    {
+      name: "Danish Ishaq",
+      job: "CTO",
+      img: empImg,
+      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+    },
+    {
+      name: "Ahmad Ishaq",
+      job: "JR. Penetration Tester",
+      img: empImg,
+      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+    },
+    {
+      name: "Afaq Aftab",
+      job: "Backend Web Developer",
+      img: empImg2,
       links: [
-        { hRef: "google.com", icon: "fab fa-github" },
-        { hRef: "google.com", icon: "fab fa-reddit" },
-        { hRef: "google.com", icon: "fab fa-twitter" },
+        { hRef: "https://github.com/afaq-AA/", icon: "fab fa-github" },
+        { hRef: "https://twitter.com/ch__afaq", icon: "fab fa-twitter" },
       ],
     },
     {
-      name: "John Doe",
-      job: "Designer",
-      img: empImg,
+      name: "Sultan Muhammad",
+      job: "Frontend Web Developer",
+      img: empImg3,
       links: [
-        { hRef: "google.com", icon: "fab fa-trello" },
-        { hRef: "google.com", icon: "fab fa-twitter" },
+        { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
       ],
     },
     {
-      name: "John Doe",
-      job: "Designer",
+      name: "Mateen Dar",
+      job: "Web Penetration Tester",
       img: empImg,
-      links: [{ hRef: "google.com", icon: "fab fa-instagram" }],
+      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+    },
+    {
+      name: "Umer",
+      job: "React Native Developer",
+      img: empImg2,
+      links: [
+        { hRef: "https://github.com/afaq-AA/", icon: "fab fa-github" },
+        { hRef: "https://twitter.com/ch__afaq", icon: "fab fa-twitter" },
+      ],
+    },
+    {
+      name: "Hafiz Sikandar",
+      job: "React Native Developer",
+      img: empImg3,
+      links: [
+        { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
+      ],
+    },
+
+    {
+      name: "Shoaib",
+      job: "React Native Developer",
+      img: empImg3,
+      links: [
+        { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
+      ],
     },
   ];
   return (

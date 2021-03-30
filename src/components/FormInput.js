@@ -12,10 +12,12 @@ const FormInput = ({
   tooltipTxt,
   pattern,
   name,
+  val,
 }) => {
   return (
     <div style={{ width: w.width, minWidth: w.minWidth, position: "relative" }}>
       <input
+        value={val}
         required={true}
         name={name}
         className={classes}

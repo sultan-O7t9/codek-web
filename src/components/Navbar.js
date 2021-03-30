@@ -4,7 +4,7 @@ import NavbarLink from "./NavbarLink";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Navbar = () => {
+const Navbar = ({ inView }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -16,7 +16,7 @@ const Navbar = () => {
       href: "#home",
     },
     { text: "SERVICES", href: "#services" },
-    { text: "PALTFORMS", href: "#platforms" },
+    { text: "TECHNOLOGIES", href: "#technologies" },
     { text: "CONTACT", href: "#contact" },
   ]);
 
@@ -67,7 +67,8 @@ const Navbar = () => {
                 >
                   <NavbarLink
                     classes={
-                      active == navLink.text ? "active-link" : "not-active"
+                      // active == navLink.text &&
+                      inView === navLink.text ? "active-link" : "not-active"
                     }
                     isActive={active}
                     text={navLink.text}
