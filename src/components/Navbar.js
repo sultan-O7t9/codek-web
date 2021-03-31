@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavbarLink from "./NavbarLink";
+import BrandLogo from "../assets/img/icons/codek-logo-1-white.svg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -10,7 +11,7 @@ const Navbar = ({ inView }) => {
   }, []);
   const [active, setActive] = useState("");
 
-  const [navLinks, setNavLinks] = useState([
+  const navLinks = [
     {
       text: "HOME",
       href: "#home",
@@ -18,7 +19,7 @@ const Navbar = ({ inView }) => {
     { text: "SERVICES", href: "#services" },
     { text: "TECHNOLOGIES", href: "#technologies" },
     { text: "CONTACT", href: "#contact" },
-  ]);
+  ];
 
   return (
     <nav
@@ -34,9 +35,15 @@ const Navbar = ({ inView }) => {
             fontSize: "2.5rem",
             color: "var(--white)",
             fontWeight: "bold",
+            height: "80px",
           }}
         >
-          CODEK
+          <img
+            src={BrandLogo}
+            alt="CODEK"
+            style={{ height: "70%", width: "auto" }}
+          />
+          {/* <BrandLogo /> */}
         </a>
         <button
           data-toggle="collapse"

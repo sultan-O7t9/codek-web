@@ -2,6 +2,35 @@ import React from "react";
 import "../assets/css/styles.css";
 
 const TeamMember = ({ member }) => {
+  let socialMediaLinks = null;
+
+  if (member.links.length !== 0) {
+    socialMediaLinks = member.links.map((link, index) => {
+      return (
+        <a
+          target="_blank"
+          rel="noreferrer"
+          key={index}
+          href={link.hRef}
+          className="btn btn-primary team-mmbr-icon-link"
+          style={{
+            width: "3rem",
+            height: "3rem",
+            borderRadius: "50%",
+            border: "1px solid #ccc",
+            margin: "10px",
+            fontSize: "1.5rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <i className={link.icon}></i>
+        </a>
+      );
+    });
+  }
+
   return (
     <div
       className="card"
@@ -31,28 +60,7 @@ const TeamMember = ({ member }) => {
           className="btn-group d-lg-flex justify-content-lg-center align-items-lg-center"
           role="group"
         >
-          {member.links.map((link, index) => {
-            return (
-              <a
-                key={index}
-                href={link.hRef}
-                className="btn btn-primary team-mmbr-icon-link"
-                style={{
-                  width: "3rem",
-                  height: "3rem",
-                  borderRadius: "50%",
-                  border: "1px solid #ccc",
-                  margin: "10px",
-                  fontSize: "1.5rem",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <i className={link.icon}></i>
-              </a>
-            );
-          })}
+          {socialMediaLinks}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import "../assets/css/styles.css";
+import GoogleMapLocation from "./GoogleMapLocation";
 
 const Footer = () => {
   const is1150 = useMediaQuery({ minWidth: "1150px" });
@@ -36,11 +37,12 @@ const Footer = () => {
         className="d-flex footer-nav-container"
         style={{
           flexDirection: is576 ? "column" : "row",
-          alignItems: is576 ? "center" : "initial",
-          paddingTop: "4.2rem",
+          alignItems: "center",
+          justifyContent: "space-between",
+          // paddingTop: "4.2rem",
           paddingRight: "2.75rem",
           paddingLeft: "2.75rem",
-          paddingBottom: "1.0625rem",
+          // paddingBottom: "1.0625rem",
         }}
       >
         <div style={{ padding: "1rem 2rem", width: "auto" }}>
@@ -106,39 +108,11 @@ const Footer = () => {
             );
           })}
         </div>
-        <div
-          style={{ width: "auto", margin: "0.8rem 0", padding: "1rem 2rem" }}
-        >
-          <h2
-            style={{
-              color: "var(--white)",
-              fontSize: "1.125rem",
-              padding: "0",
-              marginBottom: "10px",
-              paddingBottom: "13px",
-            }}
-          >
-            Quick links
-          </h2>
-          {footerLinksTwo.map((link, index) => {
-            return (
-              <a
-                key={index}
-                className="footer-nav-links"
-                href={link.hRef}
-                style={{
-                  display: "block",
-                  fontWeight: "bold",
-                  marginBottom: "0.5rem",
-                  fontSize: "15px",
-                }}
-              >
-                {link.text}
-              </a>
-            );
-          })}
-        </div> */}
+        */}
+
+        <GoogleMapLocation />
       </div>
+
       <div
         className="d-flex flex-row justify-content-between align-items-lg-center flex-flex-wrap"
         style={{

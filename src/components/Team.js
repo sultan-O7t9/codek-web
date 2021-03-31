@@ -23,13 +23,13 @@ const Team = () => {
       name: "Danish Ishaq",
       job: "CTO",
       img: empImg,
-      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+      links: [],
     },
     {
       name: "Ahmad Ishaq",
-      job: "JR. Penetration Tester",
+      job: "Jr. Penetration Tester",
       img: empImg,
-      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+      links: [],
     },
     {
       name: "Afaq Aftab",
@@ -37,6 +37,10 @@ const Team = () => {
       img: empImg2,
       links: [
         { hRef: "https://github.com/afaq-AA/", icon: "fab fa-github" },
+        {
+          hRef: "https://www.facebook.com/ch.afaq.7731",
+          icon: "fab fa-facebook",
+        },
         { hRef: "https://twitter.com/ch__afaq", icon: "fab fa-twitter" },
       ],
     },
@@ -52,32 +56,41 @@ const Team = () => {
       name: "Mateen Dar",
       job: "Web Penetration Tester",
       img: empImg,
-      links: [{ hRef: "https://github.com/sh4hzaib/", icon: "fab fa-github" }],
+      links: [
+        {
+          hRef: "https://www.facebook.com/mateen.dar.73",
+          icon: "fab fa-facebook",
+        },
+      ],
     },
     {
       name: "Umer",
       job: "React Native Developer",
       img: empImg2,
-      links: [
-        { hRef: "https://github.com/afaq-AA/", icon: "fab fa-github" },
-        { hRef: "https://twitter.com/ch__afaq", icon: "fab fa-twitter" },
-      ],
+      links: [],
     },
     {
       name: "Hafiz Sikandar",
       job: "React Native Developer",
       img: empImg3,
       links: [
-        { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
+        {
+          hRef: "https://www.linkedin.com/in/hafiz-sikander-442525155/",
+          icon: "fab fa-linkedin-in",
+        },
+        {
+          hRef: "https://www.facebook.com/sikandrzargr.sikandrzargr",
+          icon: "fab fa-facebook",
+        },
       ],
     },
 
     {
-      name: "Shoaib",
+      name: "Sohaib Ismail",
       job: "React Native Developer",
       img: empImg3,
       links: [
-        { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
+        { hRef: "https://www.linkedin.com/feed/", icon: "fab fa-linkedin-in" },
       ],
     },
   ];

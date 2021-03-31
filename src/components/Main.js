@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import HeroSection from "./HeroSection";
 import Spacer from "./Spacer";
 import Services from "./Services";
@@ -25,7 +25,7 @@ const Main = () => {
       <main
         style={{
           marginBottom: isMobile
-            ? "100vh"
+            ? "80vh"
             : is576
             ? "100vh"
             : isIPAD
