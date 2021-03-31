@@ -91,7 +91,7 @@ const HeroSection = () => {
               <br />
             </p>
             <a
-              href="index.html"
+              href="#contact"
               className="btn btn-primary hero-section-cta"
               style={{
                 padding: "1rem 2.25rem",
