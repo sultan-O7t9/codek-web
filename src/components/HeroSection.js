@@ -59,7 +59,7 @@ const HeroSection = () => {
             <h1
               style={{
                 borderColor: "var(--white)",
-                margin: "0px",
+                margin: "0px 0px 1rem",
                 color: "var(--white)",
                 height: "200px",
                 fontSize: isMobile ? "2.8rem" : "3rem",
@@ -76,7 +76,7 @@ const HeroSection = () => {
             </h1>
             <p
               style={{
-                margin: "0px",
+                margin: "0px 0px 2rem",
                 color: "var(--white)",
                 fontWeight: "normal",
                 lineHeight: "24px",
