@@ -38,7 +38,7 @@ const HeroSection = () => {
         }}
       >
         <div
-          className="d-lg-flex justify-content-lg-end align-items-lg-start "
+          className="d-lg-flex justify-content-lg-end align-items-lg-start d-xl-flex justify-content-xl-end align-items-xl-start"
           style={{
             height: "auto",
             minHeight: "30vw",
@@ -59,7 +59,7 @@ const HeroSection = () => {
             <h1
               style={{
                 borderColor: "var(--white)",
-                margin: "0px 0px 1rem",
+                margin: "0px",
                 color: "var(--white)",
                 height: "200px",
                 fontSize: isMobile ? "2.8rem" : "3rem",
@@ -76,7 +76,7 @@ const HeroSection = () => {
             </h1>
             <p
               style={{
-                margin: "0px 0px 2rem",
+                margin: "0px",
                 color: "var(--white)",
                 fontWeight: "normal",
                 lineHeight: "24px",
