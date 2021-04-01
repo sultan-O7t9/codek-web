@@ -79,7 +79,7 @@ const Platforms = () => {
           color: "RGB(44, 48, 120)",
         }}
       >
-        Technologies we use...
+        Technologies we use
       </h1>
       <p
         data-aos="fade-up"
