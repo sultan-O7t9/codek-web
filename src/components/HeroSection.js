@@ -34,13 +34,12 @@ const HeroSection = () => {
         className="d-flex "
         style={{
           flexDirection: isIPAD ? "column" : "initial",
-          margin: "3rem 0",
+          margin: is576?"0":"3rem 0",
         }}
       >
         <div
-          className="d-lg-flex justify-content-lg-end align-items-lg-start "
+          className="d-lg-flex justify-content-lg-end align-items-lg-start d-xl-flex justify-content-xl-end align-items-xl-start"
           style={{
-            height: "auto",
             minHeight: "30vw",
             width: isIPAD ? "100vw" : "50%",
           }}
@@ -48,9 +47,10 @@ const HeroSection = () => {
           <div
             style={{
               width: "90%",
+              height:isMobile?"auto":"100%",
               color: "rgba(249,245,245,0.1)",
               margin: is576 ? "auto" : "1rem",
-              marginLeft: "2rem",
+              marginLeft: isIPAD?"auto":"2rem",
               display: isIPAD ? "flex" : "initial",
               alignItems: "center",
               flexDirection: "column",
@@ -59,10 +59,10 @@ const HeroSection = () => {
             <h1
               style={{
                 borderColor: "var(--white)",
-                margin: "0px",
+                margin: isMobile||is576?"1.5rem 0":"1.5rem 0",
                 color: "var(--white)",
-                height: "200px",
-                fontSize: isMobile ? "2.8rem" : "3rem",
+                // height: isMobile?"100px":"200px",
+                fontSize: is576?"2.5rem":isMobile ? "2.5rem" : "3rem",
                 fontWeight: "bold",
                 maxWidth: isIPAD ? "100vw" : "400px",
                 paddingBottom: "0",

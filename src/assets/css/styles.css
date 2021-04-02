@@ -254,6 +254,7 @@ section {
       transform: translateY(-120px);
     }
     100% {
+      
       transform: translateY(-80px);
     }
   }
@@ -264,15 +265,15 @@ section {
   }
   @keyframes yourAnimation {
     0% {
-      transform: translateY(0px);
+      transform: translateY(-10px);
     }
     100% {
-      transform: translateY(50px);
+      transform: translateY(10px);
     }
   }
   @keyframes yourAnimationTwo {
     0% {
-      transform: translateY(-125px);
+      transform: translateY(-110px);
     }
     100% {
       transform: translateY(-90px);
@@ -300,7 +301,7 @@ section {
   }
   @keyframes yourAnimationTwo {
     0% {
-      transform: translateY(-80px);
+      transform: translateY(-60px);
     }
     100% {
       transform: translateY(-50px);

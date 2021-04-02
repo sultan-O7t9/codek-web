@@ -26,23 +26,24 @@ const Navbar = ({ inView }) => {
       className="navbar navbar-light navbar-expand-md sticky-top"
       style={{ background: "rgb(102,16,242)" }}
     >
-      <div className="container-fluid">
+      <div className="container-fluid" style={{display:"flex",alignItems:"center"}}>
         <a
           className="navbar-brand"
           id="nav-brand"
           href="#home"
           style={{
-            fontSize: "2.5rem",
+            fontSize: "2rem",
             color: "var(--white)",
             fontWeight: "bold",
-            height: "80px",
+            // height: "80px",
           }}
         >
-          <img
+          CODEK
+          {/* <img
             src={BrandLogo}
             alt="CODEK"
-            style={{ height: "70%", width: "auto" }}
-          />
+            style={{ height: "auto", width: "100px" }}
+          /> */}
           {/* <BrandLogo /> */}
         </a>
         <button

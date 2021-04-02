@@ -3,7 +3,18 @@ import { useMediaQuery } from "react-responsive";
 import "../assets/css/styles.css";
 
 const MissionAndHistoryInnerComponent = ({ content }) => {
-  const isMobile = useMediaQuery({ maxWidth: "400px" });
+  const isMobile = useMediaQuery({ maxWidth: "576px" });
+  let list=null;
+  if(content.list.length>0){
+    list=(content.list.map((listItem, index) => {
+      return (
+        <li key={index} style={{ color: "var(--gray)" }}>
+          {listItem.text}
+          <br />
+        </li>
+      );
+    }));
+  }
   return (
     <div
       className=" fade-in d-flex d-sm-flex d-md-flex d-lg-flex flex-row align-items-start flex-wrap justify-content-sm-center align-items-lg-center"
@@ -17,7 +28,7 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
           className="d-sm-flex elementToAnimate"
           src={content.imgSrc}
           alt=""
-          style={{ width: "80%" }}
+          style={{ width: isMobile?"100%":"80%" }}
         />
       </div>
       <div
@@ -25,15 +36,21 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
           width: isMobile ? "100vw" : "45%",
           marginTop: isMobile ? "1rem" : "1rem",
           textAlign: isMobile ? "center" : "initial",
+          display:"flex",
+          flexDirection:"column",
+          alignItems:"center"
         }}
       >
         <p
           style={{
+            marginTop:isMobile?"1rem":"initial",
             maxWidth: "390px",
-            marginLeft: isMobile ? "0" : "1.2rem",
+            marginLeft: isMobile ? "none" : "1.2rem",
             color: "var(--gray)",
+            fontWeight:"bold"
           }}
         >
+
           {content.title}
           <br />
           <br />
@@ -44,14 +61,7 @@ const MissionAndHistoryInnerComponent = ({ content }) => {
             marginRight: isMobile ? "0" : "2.2rem",
           }}
         >
-          {content.list.map((listItem, index) => {
-            return (
-              <li key={index} style={{ color: "var(--gray)" }}>
-                {listItem.text}
-                <br />
-              </li>
-            );
-          })}
+          {list}
         </ul>
       </div>
     </div>

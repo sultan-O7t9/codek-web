@@ -21,10 +21,10 @@ const MissionAndHistory = () => {
     {
       type: "history",
       title:
-        "Over 10 years of operating in Marketing, we have grown into a top-rated company.",
+        "Over 10 years of operating in Software Industry, we have grown into a top-rated company.",
       list: [
-        { text: "Design responsive modern websites" },
-        { text: "Redesign or revise design of outdated websites" },
+        { text: "Design & develop responsive modern softwares" },
+        { text: "Redevelop outdated softwares" },
         { text: "Develop useful features and functions" },
         { text: "Check for code error and bug issues" },
       ],
@@ -33,13 +33,8 @@ const MissionAndHistory = () => {
     {
       type: "mission",
       title:
-        "Over x years of operating in Marketing, we have grown into a top-rated company.",
-      list: [
-        { text: "Design responsive modern websites" },
-        { text: "Redesign or revise design of outdated websites" },
-        { text: "Develop useful features and functions" },
-        { text: "Check for code error and bug issues" },
-      ],
+        "Our mission is to enhance business growth of our customers with creative design, development and to deliver market defining high quality solutions that create value and reliable competitive advantage to customers around the globe.",
+      list: [],
       imgSrc: missionImg,
     },
   ];
