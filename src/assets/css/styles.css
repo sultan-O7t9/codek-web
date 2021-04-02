@@ -264,10 +264,10 @@ section {
   }
   @keyframes yourAnimation {
     0% {
-      transform: translateY(0px);
+      transform: translateY(-10px);
     }
     100% {
-      transform: translateY(50px);
+      transform: translateY(10px);
     }
   }
   @keyframes yourAnimationTwo {
