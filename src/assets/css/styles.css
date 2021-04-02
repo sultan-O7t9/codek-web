@@ -254,6 +254,7 @@ section {
       transform: translateY(-120px);
     }
     100% {
+      
       transform: translateY(-80px);
     }
   }
