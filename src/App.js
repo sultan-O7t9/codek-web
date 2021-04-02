@@ -41,7 +41,7 @@ function App() {
     });
   }, []);
   return (
-    <div>
+    <div style={{overflowX:"hidden"}}>
       <Navbar inView={intersecting} />
       <Main />
       <Footer />

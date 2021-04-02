@@ -272,7 +272,7 @@ section {
   }
   @keyframes yourAnimationTwo {
     0% {
-      transform: translateY(-125px);
+      transform: translateY(-110px);
     }
     100% {
       transform: translateY(-90px);
@@ -300,7 +300,7 @@ section {
   }
   @keyframes yourAnimationTwo {
     0% {
-      transform: translateY(-80px);
+      transform: translateY(-60px);
     }
     100% {
       transform: translateY(-50px);
