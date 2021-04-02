@@ -92,17 +92,20 @@ const HeroSection = () => {
             </p>
             <a
               href="#contact"
-              >
-              <button 
+              
                 style={{
-                  display:"inline-block",
+                  // display:"flex",
                   padding: "1rem 2.25rem",
+                  height:"60px",
+                  width:"auto",
+                  maxWidth:"170px",
+                  display:"flex",
+                  justifyContent:"center",
+                  alignItems:"center",
                   fontWeight: "bold",
                 }}
-              className="btn btn-primary hero-section-cta"
->
+              className="btn btn-primary hero-section-cta">
               Get Started
-              </button>
             </a>
           </div>
         </div>
