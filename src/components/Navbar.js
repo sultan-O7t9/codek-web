@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavbarLink from "./NavbarLink";
-import BrandLogo from "../assets/img/icons/codek-logo-1-white.svg";
+// import BrandLogo from "../assets/img/icons/codek-logo-1-white.svg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -24,9 +24,9 @@ const Navbar = ({ inView }) => {
   return (
     <nav
       className="navbar navbar-light navbar-expand-md sticky-top"
-      style={{ background: "rgb(102,16,242)" }}
+      style={{ background: "rgb(102,16,242)",top:"0",paddingTop:"0",paddingBottom:"0" }}
     >
-      <div className="container-fluid" style={{display:"flex",alignItems:"center"}}>
+      <div className="container-fluid" style={{display:"flex",alignItems:"center", position:"sticky",top:"0"}}>
         <a
           className="navbar-brand"
           id="nav-brand"

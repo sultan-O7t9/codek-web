@@ -41,11 +41,11 @@ function App() {
     });
   }, []);
   return (
-    <div style={{overflowX:"hidden"}}>
+    <>
       <Navbar inView={intersecting} />
       <Main />
       <Footer />
-    </div>
+    </>
   );
 }
 
