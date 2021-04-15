@@ -62,37 +62,7 @@ const Team = () => {
           icon: "fab fa-facebook",
         },
       ],
-    },
-    {
-      name: "Umer",
-      job: "React Native Developer",
-      img: empImg2,
-      links: [],
-    },
-    {
-      name: "Hafiz Sikandar",
-      job: "React Native Developer",
-      img: empImg3,
-      links: [
-        {
-          hRef: "https://www.linkedin.com/in/hafiz-sikander-442525155/",
-          icon: "fab fa-linkedin-in",
-        },
-        {
-          hRef: "https://www.facebook.com/sikandrzargr.sikandrzargr",
-          icon: "fab fa-facebook",
-        },
-      ],
-    },
-
-    {
-      name: "Sohaib Ismail",
-      job: "React Native Developer",
-      img: empImg3,
-      links: [
-        { hRef: "https://www.linkedin.com/feed/", icon: "fab fa-linkedin-in" },
-      ],
-    },
+    }
   ];
   return (
     <section
