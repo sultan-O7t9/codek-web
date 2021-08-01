@@ -46,7 +46,7 @@ const Team = () => {
     },
     {
       name: "Sultan Muhammad",
-      job: "Frontend Web Developer",
+      job: "Frontend Developer",
       img: empImg3,
       links: [
         { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
@@ -54,7 +54,7 @@ const Team = () => {
     },
     {
       name: "Mateen Dar",
-      job: "Web Penetration Tester",
+      job: "React Native Developer",
       img: empImg,
       links: [
         {
@@ -62,7 +62,7 @@ const Team = () => {
           icon: "fab fa-facebook",
         },
       ],
-    }
+    },
   ];
   return (
     <section
