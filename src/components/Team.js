@@ -26,14 +26,8 @@ const Team = () => {
       links: [],
     },
     {
-      name: "Ahmad Ishaq",
-      job: "Jr. Penetration Tester",
-      img: empImg,
-      links: [],
-    },
-    {
       name: "Afaq Aftab",
-      job: "Backend Web Developer",
+      job: "Sr. Backend Developer",
       img: empImg2,
       links: [
         { hRef: "https://github.com/afaq-AA/", icon: "fab fa-github" },
@@ -46,15 +40,21 @@ const Team = () => {
     },
     {
       name: "Sultan Muhammad",
-      job: "Frontend Developer",
+      job: "Sr. Frontend Developer",
       img: empImg3,
       links: [
         { hRef: "https://github.com/sultan-O7t9/", icon: "fab fa-github" },
       ],
     },
     {
+      name: "Hamza Shabeer",
+      job: "Jr. Mobile App Developer",
+      img: empImg,
+      links: [],
+    },
+    {
       name: "Mateen Dar",
-      job: "React Native Developer",
+      job: "Jr. Mobile App Developer",
       img: empImg,
       links: [
         {
@@ -62,6 +62,12 @@ const Team = () => {
           icon: "fab fa-facebook",
         },
       ],
+    },
+    {
+      name: "Muhammad Adeel",
+      job: "Jr. Mobile App Developer",
+      img: empImg,
+      links: [],
     },
   ];
   return (
