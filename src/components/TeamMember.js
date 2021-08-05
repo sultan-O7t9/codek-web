@@ -43,7 +43,7 @@ const TeamMember = ({ member }) => {
         <img
           alt=""
           src={member.img}
-          style={{ width: "140px", height: "140px" }}
+          style={{ width: "140px", height: "140px", borderRadius: "50%" }}
         />
         <h3
           className="text-muted card-subtitle mb-2"

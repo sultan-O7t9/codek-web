@@ -4,6 +4,8 @@ import Spacer from "./Spacer";
 import empImg from "../assets/img/avatar-02-140x140.png";
 import empImg2 from "../assets/img/avatar-05-140x140.png";
 import empImg3 from "../assets/img/avatar-06-140x140.png";
+import hamzaImg from "../assets/img/hamza.jpeg";
+import mateenImg from "../assets/img/mateen.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -49,13 +51,13 @@ const Team = () => {
     {
       name: "Hamza Shabeer",
       job: "Jr. Mobile App Developer",
-      img: empImg,
+      img: hamzaImg,
       links: [],
     },
     {
       name: "Mateen Dar",
       job: "Jr. Mobile App Developer",
-      img: empImg,
+      img: mateenImg,
       links: [
         {
           hRef: "https://www.facebook.com/mateen.dar.73",
