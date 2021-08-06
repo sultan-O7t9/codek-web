@@ -5,6 +5,7 @@ import empImg from "../assets/img/avatar-02-140x140.png";
 import empImg2 from "../assets/img/avatar-05-140x140.png";
 import empImg3 from "../assets/img/avatar-06-140x140.png";
 import hamzaImg from "../assets/img/hamza.jpeg";
+import afaqImg from "../assets/img/afaq.jpeg";
 import mateenImg from "../assets/img/mateen.jpg";
 
 import AOS from "aos";
@@ -30,7 +31,7 @@ const Team = () => {
     {
       name: "Afaq Aftab",
       job: "Sr. Backend Developer",
-      img: empImg2,
+      img: afaqImg,
       links: [
         { hRef: "https://github.com/afaq-AA/", icon: "fab fa-github" },
         {
